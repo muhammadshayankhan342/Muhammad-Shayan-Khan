@@ -1,0 +1,168 @@
+/* CSS Reset */
+body{
+    margin: 0;
+    padding: 0;
+    background: url('bg2.jpg');
+    /* background-size: cover; */
+    /* background-repeat: no-repeat; */
+    font-family: 'Baloo Bhai 2', cursive;
+    color: white;
+}
+
+
+/* Header */
+.header{
+    position: fixed;
+    z-index: 100;
+    top: 0;
+    width: 100%;
+    background-color: black;
+    border: 2px solid white;
+    margin: 10px 0;
+    height: auto;
+    border-radius: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+/* Logo */
+.left{
+    position: relative;
+    z-index: 100;
+    top: 16px;
+    left: 14px;
+    display: inline-block;
+    width: auto;
+}
+.left img{
+    width: 250px;
+    margin-top: 3px;
+    margin-left: auto;
+}
+
+/* nav */
+.right{
+    position: relative;
+    z-index: 100;
+    width: auto;
+    top: 0;
+    right: 83px;
+    display: inline-block;
+    color: white;
+}
+.navbar{
+    display: inline-block;
+}
+.navbar li{
+    display: inline-block;
+    padding-left: 64px;
+    margin-bottom: 0;
+}
+.navbar li a{
+    font-family: 'Baloo Bhai 2', cursive;
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+    text-decoration: none;
+}
+.navbar li a:hover, .navbar li a.active {
+    font-family: 'Baloo Bhai 2', cursive;
+    font-size: 20px;
+    font-weight: bold;
+    color: rgb(114, 113, 113);
+    text-decoration: underline;
+}
+
+
+/* Body */
+.container{
+    display: flex;
+    flex-wrap: wrap-reverse;
+    position: relative;
+    margin: 100px auto;
+}
+
+.container  .shayanimg{
+    height: 540px;
+    margin: auto;
+}
+p{
+    font-size: 28px;
+    margin: auto;
+    width: 50%;
+}
+.container p span{
+    font-weight: bolder;
+}
+
+/* gallery */
+#glheading{
+    display: block;
+    margin: auto;
+    text-align: center;
+    font-weight: bold;
+}
+.gallery{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+.gallery img{
+    margin-top: 10px;
+    height: 200px;
+    background-color: rgba(255, 255, 255, 0.568);
+    border-radius: 10px;
+    border: 2px solid white;
+}
+
+/* Sponsers */
+#spheading{
+    display: block;
+    margin: 40px auto;
+    text-align: center;
+    font-weight: bold;
+}
+.sponsers{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.sponseritem{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.sponsers .sponseritem img{
+    margin-top: 10px;
+    height: 200px;
+    background-color: rgba(255, 255, 255, 0.568);
+    border-radius: 10px;
+    border: 2px solid white;
+}
+
+
+
+/* Footer */
+footer{
+    margin-top: 100px;
+    display: block;
+    position: relative;
+    text-align: center;
+}
+/* Rightreserved */
+footer .rightreserved{
+    border-top: 2px solid white;
+    display: block;
+    width: 33%;
+    margin: 0 auto;
+    align-items: center;
+    text-align: center;
+}
+/* social links */
+.sociallinks a{
+    display: inline-block;
+    color: white;
+    margin: 5px;
+}
