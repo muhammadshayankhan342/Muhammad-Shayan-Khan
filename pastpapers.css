@@ -201,7 +201,8 @@ footer .rightreserved{
 }
 
 
-                                   /* Past Papers Tab for Phone  */
+
+                                /* Home Tab for Phone  */
 
 
 
@@ -236,7 +237,7 @@ footer .rightreserved{
     }
 
     .left img {
-        width: 250px;
+        width: 10rem;
         margin-top: 3px;
         margin-left: auto;
     }
@@ -282,4 +283,5 @@ footer .rightreserved{
 
     /* Body */
     
+
 }
