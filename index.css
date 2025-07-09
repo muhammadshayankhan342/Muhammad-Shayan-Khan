@@ -338,7 +338,7 @@ p{
 }
 
 
-                                 /* Home Tab for Phone  */
+                                    /* Home Tab for Phone  */
 
 
 
@@ -373,7 +373,7 @@ p{
     }
 
     .left img {
-        width: 250px;
+        width: 10rem;
         margin-top: 3px;
         margin-left: auto;
     }
@@ -426,14 +426,14 @@ p{
     }
 
     .container .shayanimg {
-        height: 540px;
+        height: 11rem;
         margin: auto;
     }
 
     p {
-        font-size: 28px;
+        font-size: 25px;
         margin: auto;
-        width: 90%;
+        width: 95%;
     }
 
     .container p span {
@@ -444,6 +444,8 @@ p{
     .past-paper-button {
         margin-top: 0px;
         text-align: center;
+        justify-content: center;
+        align-items: center;
     }
 
     .past-paper-button .btn {
@@ -453,7 +455,8 @@ p{
         padding: 10px 20px;
         text-decoration: none;
         border: 3px solid white;
-        font-weight: bolder;
+        font-weight: bold;
+        font-size: 10px;
         border-radius: 15px;
         transition: background-color 0.3s ease;
         margin-bottom: 50px;
