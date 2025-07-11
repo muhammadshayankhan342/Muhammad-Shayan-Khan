@@ -119,54 +119,6 @@ p{
     background-color: #353535;
 }
 
-/* gallery */
-#glheading{
-    display: block;
-    margin: auto;
-    text-align: center;
-    font-weight: bold;
-}
-.gallery{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-}
-.gallery img{
-    margin-top: 10px;
-    height: 200px;
-    background-color: rgba(255, 255, 255, 0.568);
-    border-radius: 10px;
-    border: 2px solid white;
-}
-
-/* Sponsers */
-#spheading{
-    display: block;
-    margin: 40px auto;
-    text-align: center;
-    font-weight: bold;
-}
-.sponsers{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-}
-
-.sponseritem{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-.sponsers .sponseritem img{
-    margin-top: 10px;
-    height: 200px;
-    background-color: rgba(255, 255, 255, 0.568);
-    border-radius: 10px;
-    border: 2px solid white;
-}
-
-
-
 /* Footer */
 footer{
     margin-top: 100px;
@@ -314,27 +266,6 @@ p{
     background-color: #353535;
 }
 
-
-/* gallery */
-#glheading{
-    display: block;
-    margin: auto;
-    text-align: center;
-    font-weight: bold;
-}
-.gallery{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-}
-.gallery img{
-    margin-top: 10px;
-    height: 200px;
-    background-color: rgba(255, 255, 255, 0.568);
-    border-radius: 10px;
-    border: 2px solid white;
-}
-
 }
 
 
@@ -467,55 +398,6 @@ p{
     }
 
 
-    /* gallery */
-    #glheading {
-        display: block;
-        margin: auto;
-        text-align: center;
-        font-weight: bold;
-    }
-
-    .gallery {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-    }
-
-    .gallery img {
-        margin-top: 10px;
-        width: 200px;
-        background-color: rgba(255, 255, 255, 0.568);
-        border-radius: 10px;
-        border: 2px solid white;
-    }
-
-    /* Sponsers */
-#spheading {
-    display: block;
-    margin: 40px auto;
-    text-align: center;
-    font-weight: bold;
-}
-
-.sponsers {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-
-.sponseritem {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.sponsers .sponseritem img {
-    margin-top: 10px;
-    height: 200px;
-    background-color: rgba(255, 255, 255, 0.568);
-    border-radius: 10px;
-    border: 2px solid white;
-}
+    
 
 }
