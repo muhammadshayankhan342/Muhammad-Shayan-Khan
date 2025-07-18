@@ -36,6 +36,15 @@
       e.preventDefault();
     }
   });
+
+        // Announcement
+        window.onload = function () {
+    document.getElementById('popupbox').style.display = 'block';
+};
+function closepopup() {
+    document.getElementById('popupbox').style.display = 'none';
+};
+
 </script>
 
 </head>
@@ -97,7 +106,7 @@
     <div id="popupbox" class="popup">
         <span class="class-btn" onclick="closepopup()">&times;</span>
         <h3><span style="color: red;">&#9733;</span> Announcement</h3>
-        <img src="Images/Banner.png" alt="">
+        <img src="Banner.png" alt="">
     </div>
     
 </body>
