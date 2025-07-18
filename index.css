@@ -215,31 +215,50 @@ footer .rightreserved {
 /* Announcement Popup */
 .popup {
     display: none;
-    background-color: black;
+    /* background-color: white; */
+    width: 100%;
+    top: 0;
+    left: 0;
     position: fixed;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    
+}
+.popup::before{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 80%;
+    background-color: white;
+}
+.popup-content{
+    background-color: black;
     height: 330px;
-    z-index: 999;
-    top: 10vw;
-    left: 55vh;
+    position: relative;
+    /* top: 10vw;
+    left: 55vh; */
     border-radius: 10px;
+    z-index: 1000;
     border: 2px solid white;
 }
 
-.popup h3 {
+.popup-content h3 {
     text-align: center;
 }
 
-.popup .class-btn {
+.popup-content .class-btn {
     position: absolute;
     color: white;
     top: -2px;
     right: 15px;
-    font-size: 25px;
+    font-size: 40px;
     font-weight: bold;
     cursor: pointer;
 }
-
-.popup img {
+.popup-content img {
     height: 250px;
     padding: 0;
 }
@@ -400,34 +419,53 @@ footer .rightreserved {
         border: 2px solid white;
     }
 
-    /* Announcement Popup */
+   /* Announcement Popup */
 .popup {
     display: none;
-    background-color: black;
+    /* background-color: white; */
+    width: 100%;
+    top: 0;
+    left: 0;
     position: fixed;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    
+}
+.popup::before{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 80%;
+    background-color: white;
+}
+.popup-content{
+    background-color: black;
     height: 280px;
-    z-index: 999;
-    top: 15vw;
-    left: 55vh;
+    position: relative;
+    /* top: 10vw;
+    left: 55vh; */
     border-radius: 10px;
+    z-index: 1000;
     border: 2px solid white;
 }
 
-.popup h3 {
+.popup-content h3 {
     text-align: center;
 }
 
-.popup .class-btn {
+.popup-content .class-btn {
     position: absolute;
     color: white;
     top: -2px;
     right: 15px;
-    font-size: 25px;
+    font-size: 40px;
     font-weight: bold;
     cursor: pointer;
 }
-
-.popup img {
+.popup-content img {
     height: 200px;
     padding: 0;
 }
@@ -618,33 +656,52 @@ footer .rightreserved {
 }
 
   /* Announcement Popup */
-  .popup {
+.popup {
     display: none;
-    background-color: black;
+    /* background-color: white; */
+    width: 100%;
+    top: 0;
+    left: 0;
     position: fixed;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    
+}
+.popup::before{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 80%;
+    background-color: white;
+}
+.popup-content{
+    background-color: black;
     height: 200px;
-    z-index: 999;
-    top: 30vw;
-    left: 10vh;
+    position: relative;
+    /* top: 10vw;
+    left: 55vh; */
     border-radius: 10px;
+    z-index: 1000;
     border: 2px solid white;
 }
 
-.popup h3 {
+.popup-content h3 {
     text-align: center;
 }
 
-.popup .class-btn {
+.popup-content .class-btn {
     position: absolute;
     color: white;
     top: -2px;
     right: 15px;
-    font-size: 25px;
+    font-size: 40px;
     font-weight: bold;
     cursor: pointer;
 }
-
-.popup img {
+.popup-content img {
     height: 120px;
     padding: 0;
 }
