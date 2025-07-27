@@ -96,6 +96,9 @@ body{
     justify-content: center;
     margin: 20px;
 }
+#PDFs h2{
+    border-bottom: 2px solid white;
+}
 .pdf{
     display: flex;
     flex-direction: row-reverse;
@@ -119,6 +122,14 @@ body{
 }
 .pdf a:hover{
     background-color: rgba(0, 0, 255, 0.349);
+}
+
+/* Note */
+.note{
+    border: 2px solid white;
+    margin: 20px;
+    padding: 10px;
+    border-radius: 20px;
 }
 
 
