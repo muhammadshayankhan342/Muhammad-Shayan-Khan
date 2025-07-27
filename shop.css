@@ -82,7 +82,7 @@ body{
 /* Note */
 .note{
     border: 2px solid white;
-    margin: 20px;
+    margin-top: 100px;
     padding: 10px;
     border-radius: 20px;
 }
