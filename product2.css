@@ -78,14 +78,70 @@ body{
 
 /* Body */
 
-
-/* Note */
-.note{
-    border: 2px solid white;
-    margin-top: 100px;
-    padding: 10px;
+.title{
     text-align: center;
+    margin-top: 100px;
+}
+.pagelayout{
+    padding: 20px;
+    display: grid;
+    grid-gap: 1rem;
+    grid-template-areas: 
+            'image package package package'
+            'image package package package' 
+            'description description description description';
+    justify-content: center;
+}
+#aside{
+    grid-area: image;
+}
+#aside img{
+    height: 500px;
+    border: 2px solid white;
     border-radius: 20px;
+    box-shadow: 10px 10px 50px rgba(255, 255, 255, 0.2); 
+}
+#right{
+    grid-area: package;
+    height: 500px;
+    display: grid;
+    /* flex-direction: column; */
+    grid-template-rows: repeat(3, 1fr, 2fr, 1fr);
+    background-color: white;
+    border: 2px solid black;
+    border-radius: 20px;
+    color: black;
+    justify-content: center;
+    align-items: center;
+}
+#right .packagename{
+    border-bottom: 2px solid black;
+    text-align: center;
+    font-size: 20px;
+    font-weight: bolder;
+    
+}
+.detailpackage{
+    border-bottom: 2px solid black;
+}
+.btn{
+    justify-content: center;
+    display: flex;
+}
+#right button{
+    padding: 10px 20px; 
+    background-color: black;
+     color: white;
+     border: none;
+      border-radius: 5px;
+       cursor: pointer;
+       transition: transform 0.3s ease;
+}
+#right button:hover{
+    transform: scale(1.2);
+}
+#section{
+    grid-area: description;
 }
 
 
@@ -198,6 +254,72 @@ footer .rightreserved{
 
     /* Body */
 
+    .title{
+        text-align: center;
+        margin-top: 100px;
+    }
+    .pagelayout{
+        padding: 20px;
+        display: grid;
+        grid-gap: 1rem;
+        grid-template-areas: 
+                'image package package package'
+                'image package package package' 
+                'description description description description';
+        justify-content: center;
+    }
+    #aside{
+        grid-area: image;
+    }
+    #aside img{
+        height: 350px;
+        border: 2px solid white;
+        border-radius: 20px;
+        box-shadow: 10px 10px 50px rgba(255, 255, 255, 0.2); 
+    }
+    #right{
+        grid-area: package;
+        height: 400px;
+        display: grid;
+        /* flex-direction: column; */
+        grid-template-rows: repeat(3, 1fr, 2fr, 1fr);
+        background-color: white;
+        border: 2px solid black;
+        border-radius: 20px;
+        color: black;
+        justify-content: center;
+        align-items: center;
+    }
+    #right .packagename{
+        border-bottom: 2px solid black;
+        text-align: center;
+        font-size: 20px;
+        font-weight: bolder;
+        
+    }
+    .detailpackage{
+        border-bottom: 2px solid black;
+    }
+    .btn{
+        justify-content: center;
+        display: flex;
+    }
+    #right button{
+        padding: 10px 20px; 
+        background-color: black;
+         color: white;
+         border: none;
+          border-radius: 5px;
+           cursor: pointer;
+           transition: transform 0.3s ease;
+    }
+    #right button:hover{
+        transform: scale(1.2);
+    }
+    #section{
+        grid-area: description;
+    }
+
     
 }
 
@@ -283,6 +405,72 @@ footer .rightreserved{
     }
 
     /* Body */
+
+    .title{
+        text-align: center;
+        margin-top: 100px;
+    }
+    .pagelayout{
+        padding: 20px;
+        display: grid;
+        grid-gap: 1rem;
+        grid-template-areas: 
+                'image image image image'
+                'package package package package' 
+                'description description description description';
+        justify-items: center;
+    }
+    #aside{
+        grid-area: image;
+    }
+    #aside img{
+        height: 300px;
+        border: 2px solid white;
+        border-radius: 20px;
+        box-shadow: 10px 10px 50px rgba(255, 255, 255, 0.2); 
+    }
+    #right{
+        grid-area: package;
+        width: 300px;
+        display: grid;
+        /* flex-direction: column; */
+        grid-template-rows: repeat(3, 1fr, 2fr, 1fr);
+        background-color: white;
+        border: 2px solid black;
+        border-radius: 20px;
+        color: black;
+        justify-content: center;
+        align-items: center;
+    }
+    #right .packagename{
+        border-bottom: 2px solid black;
+        text-align: center;
+        font-size: 20px;
+        font-weight: bolder;
+        
+    }
+    .detailpackage{
+        border-bottom: 2px solid black;
+    }
+    .btn{
+        justify-content: center;
+        display: flex;
+    }
+    #right button{
+        padding: 10px 20px; 
+        background-color: black;
+         color: white;
+         border: none;
+          border-radius: 5px;
+           cursor: pointer;
+           transition: transform 0.3s ease;
+    }
+    #right button:hover{
+        transform: scale(1.2);
+    }
+    #section{
+        grid-area: description;
+    }
     
 
 }
