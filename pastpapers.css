@@ -102,11 +102,14 @@ body{
 .pdf{
     display: flex;
     flex-direction: row-reverse;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
-    margin-top: 10px;
-    text-align: center;
-    margin-left: 40px;
+    width: 100%;              
+    max-width: 800px;         
+    margin: 10px auto;        
+    padding: 10px;
+    border-bottom: 1px dashed rgba(255,255,255,0.3); 
+    gap: 20px;
 }
 .pdf a{
     display: inline-block;
