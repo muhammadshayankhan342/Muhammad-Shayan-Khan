@@ -1,227 +1,197 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ur" dir="rtl">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Muhammad Shayan Khan</title>
-    <!-- Description and Keywords -->
-     <meta name="description" content="I am Muhammad Shayan Khan son of Ali Asghar. I am from Pakistan.I am the student of Matric at Superior Lalazar School and College Thana. My hobbies is play chess and learning somthing new. I have completed Graphics Designing(Logo Designing) from GFXmentor. I have design many logos for German Logo Design Company. Now i am enroll in Web Development course at Code With Harry.">
-     <meta name="keywords" content="Portfolio, shayan, Muhammad Shayan Khan, khan, muhammad, muhammad shayan khan, portfolio website, pestaso groups, pestaso education, pestaso designs, pestaso fashion">
-    <!-- CSS -->
+    <title>محمد شایان خان - سابقہ پیپرز</title>
+    <meta name="description" content="میں محمد شایان خان ہوں، پاکستان سے تعلق رکھنے والا طالب علم اور ویب ڈویلپر۔">
+     <meta name="keywords" content="Portfolio, shayan, Muhammad Shayan Khan, khan, muhammad, muhammad shayan khan, portfolio website">
     <link rel="stylesheet" href="pastpapers.css">
-    <!-- Font -->
     <link href="https://fonts.googleapis.com/css2?family=Baloo+Bhai+2&display=swap" rel="stylesheet">
-    <!-- icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-    <!-- Favicon -->
     <link rel="shortcut icon" href="img.png" type="image/x-icon">
-    <!-- Right Click Disable -->
+    
     <script>
         // Disable right-click
-        document.addEventListener('contextmenu', function (e) {
-          e.preventDefault();
-        });
-              // Disable specific keyboard shortcuts
+        document.addEventListener('contextmenu', e => e.preventDefault());
+        
+        // Disable keyboard shortcuts
         document.addEventListener('keydown', function (e) {
-          // F12
-          if (e.key === "F12") {
-            e.preventDefault();
-          }
-      
-          // Ctrl+Shift+I or Ctrl+Shift+J or Ctrl+U or Ctrl+S
-          if (
+          if (e.key === "F12" || 
             (e.ctrlKey && e.shiftKey && (e.key === 'I' || e.key === 'J')) || 
-            (e.ctrlKey && (e.key === 'U' || e.key === 'S'))
-          ) {
+            (e.ctrlKey && (e.key === 'U' || e.key === 'S'))) {
             e.preventDefault();
           }
         });
-      </script>
 
+        // Hamburger Toggle Function
+        function toggleMenu() {
+            const nav = document.getElementById('navbar-list');
+            nav.classList.toggle('active');
+        }
+    </script>
 </head>
 <body>
 
-           <!-- HEADER -->
-
     <header class="header">
-        <!-- Div for logo -->
         <div class="left">
-            <a href="index.html"><img src="logo.png" alt="Muhammad Shayan Khan"></a>
+            <a href="index.html"><img src="logo.png" alt="محمد شایان خان"></a>
         </div>
-        <!-- Div for nav bar -->
+        
+        <div class="hamburger" onclick="toggleMenu()">
+            <i class="fas fa-bars"></i>
+        </div>
+
         <div class="right">
             <nav class="navbar">
-                <ul >
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="videos.html">Videos</a></li>
-                    <li><a href="awards.html">My Awards</a></li>
-                    <li><a href="shop.html">Shop</a></li>
-                    <li><a href="contact.html">Contact Shayan</a></li>
+                <ul id="navbar-list">
+                    <li><a href="index.html">ہوم پیج</a></li>
+                    <li><a href="videos.html">ویڈیوز</a></li>
+                    <li><a href="awards.html">میرے ایوارڈز</a></li>
+                    <li><a href="contact.html">رابطہ کریں</a></li>
                 </ul>
             </nav>
         </div>
     </header>
-                  <!-- BODY -->
 
-                        <!-- Past and Mock Papers -->
-                         <h1 id="pmheading">Past Papers and Mock Papers</h1>
-                         
-                         <div id="PDFs">
+    <h1 id="pmheading">سابقہ پیپرز اور ماک پیپرز</h1>
+    
+    <div id="PDFs">
+        <h2>کلاس "9ویں" سابقہ پیپرز بورڈ ملاکنڈ</h2>
 
-                             <h2>Class "9th" Past-Papers Bise Malakand</h2>
+        <div class="pdf">
+            <a href="https://drive.google.com/file/d/1qFvHh-lFrN0FheLblI8F6tJbz5JaUUxb/view?usp=sharing" target="_blank">ڈاؤن لوڈ کریں</a>
+            <h3>کلاس 9ویں بیالوجی پیپر 2024 بورڈ ملاکنڈ</h3>
+        </div>
 
-                          <div class="pdf">
-                            <a href="https://drive.google.com/file/d/1qFvHh-lFrN0FheLblI8F6tJbz5JaUUxb/view?usp=sharing" target="_blank">Download</a>
-                            <h3>Class 9th Biology Past Paper 2024 Bise Malakand</h3>
-                          </div>
+        <div class="pdf">
+            <a href="https://drive.google.com/file/d/1NhB4NNzcnIgziusebLmvx0b_5H8jvmqy/view?usp=sharing" target="_blank">ڈاؤن لوڈ کریں</a>
+            <h3>کلاس 9ویں کیمسٹری پیپر 2024 بورڈ ملاکنڈ</h3>
+        </div>
 
-                          <div class="pdf">
-                            <a href="https://drive.google.com/file/d/1NhB4NNzcnIgziusebLmvx0b_5H8jvmqy/view?usp=sharing" target="_blank">Download</a>
-                            <h3>Class 9th Chemistry Past Paper 2024 Bise Malakand</h3>
-                          </div>
+        <div class="pdf">
+            <a href="https://drive.google.com/file/d/1CVLAHyv1vCgx0n7348Wi2zp0QnirMQFI/view?usp=sharing" target="_blank">ڈاؤن لوڈ کریں</a>
+            <h3>کلاس 9ویں اسلامیات پیپر 2024 بورڈ ملاکنڈ</h3>
+        </div>
 
-                          <div class="pdf">
-                            <a href="https://drive.google.com/file/d/1CVLAHyv1vCgx0n7348Wi2zp0QnirMQFI/view?usp=sharing" target="_blank">Download</a>
-                            <h3>Class 9th Islamiat Past Paper 2024 Bise Malakand</h3>
-                          </div>
+        <div class="pdf">
+            <a href="https://drive.google.com/file/d/1yeqYAFTlEN4rs2IGpiRB-H4lrn_SJOFQ/view?usp=sharing" target="_blank">ڈاؤن لوڈ کریں</a>
+            <h3>کلاس 9ویں ریاضی (Maths) پیپر 2024 بورڈ ملاکنڈ</h3>
+        </div>
 
-                          <div class="pdf">
-                            <a href="https://drive.google.com/file/d/1yeqYAFTlEN4rs2IGpiRB-H4lrn_SJOFQ/view?usp=sharing" target="_blank">Download</a>
-                            <h3>Class 9th Maths Past Paper 2024 Bise Malakand</h3>
-                          </div>
-                          
+        <div class="pdf">
+            <a href="https://drive.google.com/file/d/1_9KhyN_ztaLQ7nQTbi2buk0NkYW_YtzN/view?usp=sharing" target="_blank">ڈاؤن لوڈ کریں</a>
+            <h3>کلاس 9ویں مطالعہ قرآن پیپر 2024 بورڈ ملاکنڈ</h3>
+        </div>
 
-                          <div class="pdf">
-                            <a href="https://drive.google.com/file/d/1_9KhyN_ztaLQ7nQTbi2buk0NkYW_YtzN/view?usp=sharing" target="_blank">Download</a>
-                            <h3>Class 9th Mutalia-Quran Past Paper 2024 Bise Malakand</h3>
-                          </div>
-                          
+        <div class="pdf">
+            <a href="https://drive.google.com/file/d/16FBhydC2htt0DX_iMOqKZt2qAECl0oMw/view?usp=sharing" target="_blank">ڈاؤن لوڈ کریں</a>
+            <h3>کلاس 9ویں مطالعہ قرآن پیپر 2025 بورڈ ملاکنڈ</h3>
+        </div>
 
-                          <div class="pdf">
-                            <a href="https://drive.google.com/file/d/16FBhydC2htt0DX_iMOqKZt2qAECl0oMw/view?usp=sharing" target="_blank">Download</a>
-                            <h3>Class 9th Mutalia-Quran Past Paper 2025 Bise Malakand</h3>
-                          </div>
+        <div class="pdf">
+            <a href="https://drive.google.com/file/d/18qmgS_L1s4Dkr_vWrtqKP-Wq_sHkZLrT/view?usp=sharing" target="_blank">ڈاؤن لوڈ کریں</a>
+            <h3>کلاس 9ویں مطالعہ پاکستان پیپر 2024 بورڈ ملاکنڈ</h3>
+        </div>
 
-                          <div class="pdf">
-                            <a href="https://drive.google.com/file/d/18qmgS_L1s4Dkr_vWrtqKP-Wq_sHkZLrT/view?usp=sharing" target="_blank">Download</a>
-                            <h3>Class 9th Pakistan Studies Past Paper 2024 Bise Malakand</h3>
-                          </div>
+        <div class="pdf">
+            <a href="https://drive.google.com/file/d/1pv3EppYNoQ3vmJ9gE2P-srqG5E1zJ_9r/view?usp=sharing" target="_blank">ڈاؤن لوڈ کریں</a>
+            <h3>کلاس 9ویں فزکس پیپر 2024 بورڈ ملاکنڈ</h3>
+        </div>
 
-                          <div class="pdf">
-                            <a href="https://drive.google.com/file/d/1pv3EppYNoQ3vmJ9gE2P-srqG5E1zJ_9r/view?usp=sharing" target="_blank">Download</a>
-                            <h3>Class 9th Physics Past Paper 2024 Bise Malakand</h3>
-                          </div>
+        <div class="pdf">
+            <a href="https://drive.google.com/file/d/1vdCoC7NnCMPhkelDTN5DeRj_XEHQx8U3/view?usp=sharing" target="_blank">ڈاؤن لوڈ کریں</a>
+            <h3>کلاس 9ویں اردو پیپر 2024 بورڈ ملاکنڈ</h3>
+        </div>
 
-                          <div class="pdf">
-                            <a href="https://drive.google.com/file/d/1vdCoC7NnCMPhkelDTN5DeRj_XEHQx8U3/view?usp=sharing" target="_blank">Download</a>
-                            <h3>Class 9th Urdu Past Paper 2024 Bise Malakand</h3>
-                          </div>
+        <h2>کلاس "10ویں" سابقہ پیپرز بورڈ ملاکنڈ</h2>
 
+        <div class="pdf">
+            <a href="https://drive.google.com/file/d/1iPVFwFaaZQDSAym35wO1h-RQcqES4cBJ/view?usp=sharing" target="_blank">ڈاؤن لوڈ کریں</a>
+            <h3>کلاس 10ویں انگلش پیپر 2024 بورڈ ملاکنڈ</h3>
+        </div>
 
-                          <h2>Class "10th" Past-Papers Bise Malakand</h2>
-                          
-                          <div class="pdf">
-                            <a href="https://drive.google.com/file/d/1iPVFwFaaZQDSAym35wO1h-RQcqES4cBJ/view?usp=sharing" target="_blank">Download</a>
-                            <h3>Class 10th English Past Paper 2024 Bise Malakand</h3>
-                          </div>
+        <div class="pdf">
+            <a href="https://drive.google.com/file/d/1BVuKGnKamZ6zYj6pWrkIlihi0j9RgFQD/view?usp=sharing" target="_blank">ڈاؤن لوڈ کریں</a>
+            <h3>کلاس 10ویں انگلش پیپر 2025 بورڈ ملاکنڈ</h3>
+        </div>
 
-                          <div class="pdf">
-                            <a href="https://drive.google.com/file/d/1BVuKGnKamZ6zYj6pWrkIlihi0j9RgFQD/view?usp=sharing" target="_blank">Download</a>
-                            <h3>Class 10th English Past Paper 2025 Bise Malakand</h3>
-                          </div>
+        <div class="pdf">
+            <a href="https://drive.google.com/file/d/1zizamKoS7J1zV33NJ-l_uWDLZLm0lNiL/view?usp=sharing" target="_blank">ڈاؤن لوڈ کریں</a>
+            <h3>کلاس 10ویں مطالعہ قرآن پیپر 2025 بورڈ ملاکنڈ</h3>
+        </div>
 
-                          <div class="pdf">
-                            <a href="https://drive.google.com/file/d/1zizamKoS7J1zV33NJ-l_uWDLZLm0lNiL/view?usp=sharing" target="_blank">Download</a>
-                            <h3>Class 10th Mutalia-Quran Past Paper 2025 Bise Malakand</h3>
-                          </div>
+        <div class="pdf">
+            <a href="https://drive.google.com/file/d/1_t7ZmvYq1ThLMOd2W0czR9IZHEhkemeg/view?usp=sharing" target="_blank">ڈاؤن لوڈ کریں</a>
+            <h3>کلاس 10ویں ریاضی (Maths) پیپر 2025 بورڈ ملاکنڈ</h3>
+        </div>
 
-                          <div class="pdf">
-                            <a href="https://drive.google.com/file/d/1_t7ZmvYq1ThLMOd2W0czR9IZHEhkemeg/view?usp=sharing" target="_blank">Download</a>
-                            <h3>Class 10th Maths Past Paper 2025 Bise Malakand</h3>
-                          </div>
+        <div class="pdf">
+            <a href="https://drive.google.com/file/d/1J7iZpr8UtAsQcLoe44HMrEvEwOeZfa3n/view?usp=sharing" target="_blank">ڈاؤن لوڈ کریں</a>
+            <h3>کلاس 10ویں فزکس پیپر 2025 بورڈ ملاکنڈ</h3>
+        </div>
 
-                          <div class="pdf">
-                            <a href="https://drive.google.com/file/d/1J7iZpr8UtAsQcLoe44HMrEvEwOeZfa3n/view?usp=sharing" target="_blank">Download</a>
-                            <h3>Class 10th Physics Past Paper 2025 Bise Malakand</h3>
-                          </div>
+        <div class="pdf">
+            <a href="https://drive.google.com/file/d/1Q331tTriV1sJwCTu2JgN97EJh3NEea4N/view?usp=sharing" target="_blank">ڈاؤن لوڈ کریں</a>
+            <h3>کلاس 10ویں اسلامیات پیپر 2025 بورڈ ملاکنڈ</h3>
+        </div>
 
-                          <div class="pdf">
-                            <a href="https://drive.google.com/file/d/1Q331tTriV1sJwCTu2JgN97EJh3NEea4N/view?usp=sharing" target="_blank">Download</a>
-                            <h3>Class 10th Islamiat Past Paper 2025 Bise Malakand</h3>
-                          </div>
+        <div class="pdf">
+            <a href="https://drive.google.com/file/d/1jZ9vnI_o-MBhabIUJ3gCS1HBfBb7oxZT/view?usp=sharing" target="_blank">ڈاؤن لوڈ کریں</a>
+            <h3>کلاس 10ویں مطالعہ پاکستان پیپر 2025 بورڈ ملاکنڈ</h3>
+        </div>
 
-                          <div class="pdf">
-                            <a href="https://drive.google.com/file/d/1jZ9vnI_o-MBhabIUJ3gCS1HBfBb7oxZT/view?usp=sharing" target="_blank">Download</a>
-                            <h3>Class 10th Pakistan-Studies Past Paper 2025 Bise Malakand</h3>
-                          </div>
+        <div class="pdf">
+            <a href="https://drive.google.com/file/d/1P2ocW_AQDHNrswLid5xN1ylW7P59vaLo/view?usp=sharing" target="_blank">ڈاؤن لوڈ کریں</a>
+            <h3>کلاس 10ویں بیالوجی پیپر 2025 بورڈ ملاکنڈ</h3>
+        </div>
 
-                          <div class="pdf">
-                            <a href="https://drive.google.com/file/d/1P2ocW_AQDHNrswLid5xN1ylW7P59vaLo/view?usp=sharing" target="_blank">Download</a>
-                            <h3>Class 10th Biology Past Paper 2025 Bise Malakand</h3>
-                          </div>
+        <div class="pdf">
+            <a href="https://drive.google.com/file/d/1LpeTNbbckzzCLd_OimWKcMyzOxnFj7Qf/view?usp=sharing" target="_blank">ڈاؤن لوڈ کریں</a>
+            <h3>کلاس 10ویں کیمسٹری پیپر 2025 بورڈ ملاکنڈ</h3>
+        </div>
 
-                          <div class="pdf">
-                            <a href="https://drive.google.com/file/d/1LpeTNbbckzzCLd_OimWKcMyzOxnFj7Qf/view?usp=sharing" target="_blank">Download</a>
-                            <h3>Class 10th Chemistry Past Paper 2025 Bise Malakand</h3>
-                          </div>
+        <div class="pdf">
+            <a href="https://drive.google.com/file/d/1tVfEVpO2A7EckRCMLAEXRDtC4ykeKbr-/view?usp=sharing" target="_blank">ڈاؤن لوڈ کریں</a>
+            <h3>کلاس 10ویں اردو پیپر 2025 بورڈ ملاکنڈ</h3>
+        </div>
 
-                          <div class="pdf">
-                            <a href="https://drive.google.com/file/d/1tVfEVpO2A7EckRCMLAEXRDtC4ykeKbr-/view?usp=sharing" target="_blank">Download</a>
-                            <h3>Class 10th Urdu Past Paper 2025 Bise Malakand</h3>
-                          </div>
+        <div class="pdf">
+            <a href="https://drive.google.com/file/d/1xJvdc6wKuKPVUkLPmDl-arIv_Bul5say/view?usp=sharing" target="_blank">ڈاؤن لوڈ کریں</a>
+            <h3>کلاس 10ویں اردو پیپر 2024 بورڈ ملاکنڈ</h3>
+        </div>
 
-                          <div class="pdf">
-                            <a href="https://drive.google.com/file/d/1xJvdc6wKuKPVUkLPmDl-arIv_Bul5say/view?usp=sharing" target="_blank">Download</a>
-                            <h3>Class 10th Urdu Past Paper 2024 Bise Malakand</h3>
-                          </div>
+        <div class="pdf">
+            <a href="https://drive.google.com/file/d/16SiA3jcRxHBouicCKmruIuiWikCQkCb9/view?usp=sharing" target="_blank">ڈاؤن لوڈ کریں</a>
+            <h3>کلاس 10ویں بیالوجی پیپر 2024 بورڈ ملاکنڈ</h3>
+        </div>
+        
+        <div class="pdf">
+            <a href="https://drive.google.com/file/d/1NhB4NNzcnIgziusebLmvx0b_5H8jvmqy/view?usp=sharing" target="_blank">ڈاؤن لوڈ کریں</a>
+            <h3>کلاس 10ویں کیمسٹری پیپر 2024 بورڈ ملاکنڈ</h3>
+        </div>
 
-                          <div class="pdf">
-                            <a href="https://drive.google.com/file/d/16SiA3jcRxHBouicCKmruIuiWikCQkCb9/view?usp=sharing" target="_blank">Download</a>
-                            <h3>Class 10th Biology Past Paper 2024 Bise Malakand</h3>
-                          </div>
-                          
-                          <div class="pdf">
-                            <a href="https://drive.google.com/file/d/1NhB4NNzcnIgziusebLmvx0b_5H8jvmqy/view?usp=sharing" target="_blank">Download</a>
-                            <h3>Class 10th Chemistry Past Paper 2024 Bise Malakand</h3>
-                          </div>
+        <h2>کلاس "10ویں" ماک پیپرز بورڈ ملاکنڈ</h2>
+        
+        <div class="pdf">
+            <a href="https://drive.google.com/file/d/1v2DmMbiA2ZhK4Q1GVXi9E9DnysVs0Srn/view?usp=sharing" target="_blank">ڈاؤن لوڈ کریں</a>
+            <h3>کلاس 10ویں ماک پیپر برائے سالانہ II ملاکنڈ بورڈ</h3>
+        </div>
+    </div>
 
-
-
-                          <h2>Class "10th" Mock papers Bise Malakand</h2>
-                          
-                          <div class="pdf">
-                            <a href="https://drive.google.com/file/d/1v2DmMbiA2ZhK4Q1GVXi9E9DnysVs0Srn/view?usp=sharing" target="_blank">Download</a>
-                            <h3>Class 10th Mock Paper For Bise Malakand Annual II</h3>
-                          </div>
-
-
-
-                         </div>
-
-                         <div class="note">
-                          <h4><span style="color: red;">&#9733; Important Note About MCQs: </span> Some of the past papers available on this website contain MCQs with marked answers. However, we cannot guarantee the accuracy of these marked options, as they may have been selected by previous users or sources and could be incorrect. <br>
-
-                            👉 We strongly advise students to double-check each MCQ with their textbooks or trusted teachers to ensure correct understanding and preparation.</h4>
-                         </div>
-                         
-
-
-
-
-
-         <!-- FOOTER -->
+    <div class="note">
+        <h4><span style="color: red;">★ ایم سی کیوز (MCQs) کے بارے میں ضروری نوٹ:</span> اس ویب سائٹ پر دستیاب کچھ سابقہ پیپرز میں نشان زدہ جوابات ہو سکتے ہیں۔ ہم ان کی درستگی کی ضمانت نہیں دے سکتے۔ <br>
+        👉 ہم طلباء کو مشورہ دیتے ہیں کہ وہ اپنی درسی کتابوں سے ہر سوال کی تصدیق ضرور کریں۔</h4>
+    </div>
 
     <footer>
-    <div class="sociallinks">
-      <a href="https://www.youtube.com/@M.Shayankhan-if5bs" target="_blank"><i class="fa-brands fa-youtube"></i></a>
-      
-    
-      <a href="https://whatsapp.com/channel/0029VbAt6hQ3WHTasuCiTx20" target="_blank"><i
-          class="fab fa-whatsapp"></i></a>
-    </div>
-    <div class="rightreserved">&copy;2025 Shayan. All rights reserved.
-    </div>
-  </footer>
+        <div class="sociallinks">
+            <a href="https://www.youtube.com/@M.Shayankhan-if5bs" target="_blank"><i class="fa-brands fa-youtube"></i></a>
+            <a href="https://www.facebook.com/profile.php?id=61551818460421" target="_blank"><i class="fab fa-facebook"></i></a>
+            <a href="https://www.instagram.com/shayan_shani_khan/" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="https://whatsapp.com/channel/0029VbAt6hQ3WHTasuCiTx20" target="_blank"><i class="fab fa-whatsapp"></i></a>
+        </div>
+        <div class="rightreserved">&copy; 2025 شایان۔ جملہ حقوق محفوظ ہیں۔</div>
+    </footer>
 </body>
 </html>
-

@@ -1,99 +1,83 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ur" dir="rtl">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Muhammad Shayan Khan</title>
-    <!-- Description and Keywords -->
-    <meta name="description" content="I am Muhammad Shayan Khan son of Ali Asghar. I am from Pakistan.I am the student of Matric at Superior Lalazar School and College Thana. My hobbies is play chess and learning somthing new. I have completed Graphics Designing(Logo Designing) from GFXmentor. I have design many logos for German Logo Design Company. Now i am enroll in Web Development course at Code With Harry.">
-    <meta name="keywords" content="Portfolio, shayan, Muhammad Shayan Khan, khan, muhammad, muhammad shayan khan, portfolio website, pestaso groups, pestaso education, pestaso designs, pestaso fashion">
-    <!-- CSS -->
+    <title>محمد شایان خان - رابطہ کریں</title>
+    <meta name="description" content="میں محمد شایان خان ہوں۔ مجھ سے رابطہ کرنے کے لیے نیچے دیا گیا فارم پُر کریں یا ای میل کریں۔">
+    <meta name="keywords" content="رابطہ، شایان، محمد شایان خان، ای میل، فارم">
     <link rel="stylesheet" href="contact.css">
-    <!-- Font -->
     <link href="https://fonts.googleapis.com/css2?family=Baloo+Bhai+2&display=swap" rel="stylesheet">
-    <!-- icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-    <!-- Favicon -->
     <link rel="shortcut icon" href="img.png" type="image/x-icon">
-    <!-- Right Click Disable -->
+    
     <script>
-  // Disable right-click
-  document.addEventListener('contextmenu', function (e) {
-    e.preventDefault();
-  });
-        // Disable specific keyboard shortcuts
-  document.addEventListener('keydown', function (e) {
-    // F12
-    if (e.key === "F12") {
-      e.preventDefault();
-    }
+        // Disable right-click & shortcuts
+        document.addEventListener('contextmenu', e => e.preventDefault());
+        document.addEventListener('keydown', e => {
+            if (e.key === "F12" || (e.ctrlKey && e.shiftKey && (e.key === 'I' || e.key === 'J')) || (e.ctrlKey && (e.key === 'U' || e.key === 'S'))) {
+                e.preventDefault();
+            }
+        });
 
-    // Ctrl+Shift+I or Ctrl+Shift+J or Ctrl+U or Ctrl+S
-    if (
-      (e.ctrlKey && e.shiftKey && (e.key === 'I' || e.key === 'J')) || 
-      (e.ctrlKey && (e.key === 'U' || e.key === 'S'))
-    ) {
-      e.preventDefault();
-    }
-  });
-</script>
-
-
+        // Hamburger Toggle Function
+        function toggleMenu() {
+            const nav = document.getElementById('navbar-list');
+            nav.classList.toggle('active');
+        }
+    </script>
 </head>
 <body>
 
-           <!-- HEADER -->
-
-    <header class="header">
-        <!-- Div for logo -->
-        <div class="left">
-            <a href="index.html"><img src="logo.png" alt="Muhammad Shayan Khan"></a>
-        </div>
-        <!-- Div for nav bar -->
-        <div class="right">
-            <nav class="navbar">
-                <ul >
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="videos.html">Videos</a></li>
-                    <li><a href="awards.html">My Awards</a></li>
-                    <li><a href="shop.html">Shop</a></li>
-                    <li><a href="contact.html" class="active">Contact Shayan</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
-     
-                  <!-- BODY -->
-
-    
-                  <div class="container">
-                    <h1>Contact Shayan</h3>
-                        <form action="https://formspree.io/f/myzjqlzv" method="POST">
-                    <input type="text" name="name" placeholder="Write your Name" class="name">
-                    <input type="email" name="email" placeholder="Write your Email" class="email">
-                    <textarea name="comment" placeholder="Write your Comment" class="comment" rows="10"></textarea>
-                     <input type="submit" value="Submit Now" class="btn">
-                            <input type="hidden" name="_next" value="https://muhammadshayankhan342.github.io/Muhammad-Shayan-Khan/index.html">
-                    </form>
-                  </div>
-
-
-
-
-         <!-- FOOTER -->
-
-   <footer>
-    <div class="sociallinks">
-      <a href="https://www.youtube.com/@M.Shayankhan-if5bs" target="_blank"><i class="fa-brands fa-youtube"></i></a>
-      
-    
-      <a href="https://whatsapp.com/channel/0029VbAt6hQ3WHTasuCiTx20" target="_blank"><i
-          class="fab fa-whatsapp"></i></a>
+  <header class="header">
+    <div class="left">
+        <a href="index.html"><img src="logo.png" alt="محمد شایان خان"></a>
     </div>
-    <div class="rightreserved">&copy;2025 Shayan. All rights reserved.
+    
+    <div class="hamburger" onclick="toggleMenu()">
+        <i class="fas fa-bars"></i>
     </div>
-  </footer>
+
+    <div class="right">
+        <nav class="navbar">
+            <ul id="navbar-list">
+                <li><a href="index.html">ہوم پیج</a></li>
+                <li><a href="videos.html">ویڈیوز</a></li>
+                <li><a href="awards.html">میرے ایوارڈز</a></li>
+                <li><a href="contact.html">رابطہ کریں</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+
+    <div class="contact-container">
+        <h1 id="cheading">مجھ سے رابطہ کریں</h1>
+        
+        <div class="form">
+            <form action="https://formsubmit.co/mshanskhan342@gmail.com" method="POST">
+                <input type="text" name="name" placeholder="آپ کا نام" class="name" required>
+                <input type="email" name="email" placeholder="آپ کا ای میل" class="email" required>
+                <textarea name="comment" placeholder="آپ کا پیغام" class="comment" rows="8" required></textarea>
+                <input type="submit" value="پیغام بھیجیں" class="btn">
+                <input type="hidden" name="_next" value="https://muhammadshayankhan342.github.io/Muhammad-Shayan-Khan/index.html">
+            </form>
+        </div>
+
+        <div class="QR">
+            <img src="qr_mshanskhan342.png" alt="QR Code">
+            <h4>ای میل کے لیے اسکین کریں</h4>
+        </div>
+    </div>
+
+    <footer>
+        <div class="sociallinks">
+            <a href="https://www.youtube.com/@M.Shayankhan-if5bs" target="_blank"><i class="fa-brands fa-youtube"></i></a>
+            <a href="https://www.facebook.com/profile.php?id=61551818460421" target="_blank"><i class="fab fa-facebook"></i></a>
+            <a href="https://www.instagram.com/shayan_shani_khan/" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="https://whatsapp.com/channel/0029VbAt6hQ3WHTasuCiTx20" target="_blank"><i class="fab fa-whatsapp"></i></a>
+        </div>
+        <div class="rightreserved">&copy; 2025 شایان۔ جملہ حقوق محفوظ ہیں۔</div>
+    </footer>
 </body>
 </html>
-
-

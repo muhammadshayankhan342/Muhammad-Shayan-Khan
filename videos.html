@@ -1,149 +1,118 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ur" dir="rtl">
 
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Muhammad Shayan Khan</title>
-  <!-- Description and Keywords -->
-  <meta name="description"
-    content="I am Muhammad Shayan Khan. Here you will watch my videos ">
-  <meta name="keywords"
-    content="Portfolio, shayan, Muhammad Shayan Khan, khan, muhammad, muhammad shayan khan, portfolio website, pestaso groups, pestaso education, pestaso designs, pestaso fashion">
-  <!-- CSS -->
+  <title>محمد شایان خان - ویڈیوز</title>
+  <meta name="description" content="میں محمد شایان خان ہوں۔ یہاں آپ میری تعلیمی اور معلوماتی ویڈیوز دیکھ سکتے ہیں۔">
+  <meta name="keywords" content="پورٹ فولیو, شایان, ویڈیوز, تعلیمی ویڈیوز, محمد شایان خان">
+  
   <link rel="stylesheet" href="videos.css">
-  <!-- Font -->
   <link href="https://fonts.googleapis.com/css2?family=Baloo+Bhai+2&display=swap" rel="stylesheet">
-  <!-- icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-  <!-- Favicon -->
   <link rel="shortcut icon" href="img.png" type="image/x-icon">
-  <!-- Right Click Disable -->
+
   <script>
-    // Disable right-click
-    document.addEventListener('contextmenu', function (e) {
-      e.preventDefault();
+    // Disable right click and shortcuts
+    document.addEventListener('contextmenu', e => e.preventDefault());
+    document.addEventListener('keydown', e => {
+        if (e.key === "F12" || (e.ctrlKey && e.shiftKey && (e.key === 'I' || e.key === 'J')) || (e.ctrlKey && (e.key === 'U' || e.key === 'S'))) {
+            e.preventDefault();
+        }
     });
-    // Disable specific keyboard shortcuts
-    document.addEventListener('keydown', function (e) {
-      // F12
-      if (e.key === "F12") {
-        e.preventDefault();
-      }
 
-      // Ctrl+Shift+I or Ctrl+Shift+J or Ctrl+U or Ctrl+S
-      if (
-        (e.ctrlKey && e.shiftKey && (e.key === 'I' || e.key === 'J')) ||
-        (e.ctrlKey && (e.key === 'U' || e.key === 'S'))
-      ) {
-        e.preventDefault();
-      }
-    });
-  </script><style>
-    
-    
-    #video-container {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 20px;
-      margin-top: 30px;
-    }
-    iframe {
-      border: none;
-      border-radius: 10px;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.2);
-    }
-  </style>
+    // Hamburger Toggle Function
+    function toggleMenu() {
+            const nav = document.getElementById('navbar-list');
+            nav.classList.toggle('active');
+        }
 
+
+
+        
+  </script>
 </head>
 
 <body>
 
-  <!-- HEADER -->
-
   <header class="header">
-    <!-- Div for logo -->
     <div class="left">
-      <a href="index.html"><img src="logo.png" alt="Muhammad Shayan Khan"></a>
+        <a href="index.html"><img src="logo.png" alt="محمد شایان خان"></a>
     </div>
-    <!-- Div for nav bar -->
-    <div class="right">
-      <nav class="navbar">
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="videos.html" class="active">Videos</a></li>
-          <li><a href="awards.html">My Awards</a></li>
-          <li><a href="shop.html">Shop</a></li>
-          <li><a href="contact.html">Contact Shayan</a></li>
-        </ul>
-      </nav>
+    
+    <div class="hamburger" onclick="toggleMenu()">
+        <i class="fas fa-bars"></i>
     </div>
-  </header>
-  <!-- BODY -->
 
+    <div class="right">
+        <nav class="navbar">
+            <ul id="navbar-list">
+                <li><a href="index.html">ہوم پیج</a></li>
+                <li><a href="videos.html">ویڈیوز</a></li>
+                <li><a href="awards.html">میرے ایوارڈز</a></li>
+                <li><a href="contact.html">رابطہ کریں</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+  <h1 id="vheading">🎥 میرے یوٹیوب چینل کی ویڈیوز</h1>
   
-  
-  <h1 id="vheading">🎥 My YouTube Channel Videos</h1>
   <div id="video-container"></div>
 
+  <div class="subscribe-section">
+    <a href="https://www.youtube.com/channel/UC5Tcil1pp2Z8eJRRrhvK_iw?sub_confirmation=1" target="_blank" class="subscribe-btn">
+      <i class="fa-brands fa-youtube"></i> یوٹیوب پر سبسکرائب کریں
+    </a>
+  </div>
+
   <script>
-    const API_KEY = 'AIzaSyDEkaytXf3Ox4qPHvt_N4NSlTEWPEawLUc';   // 🔹 Paste your YouTube Data API key
-    const CHANNEL_ID = 'UC5Tcil1pp2Z8eJRRrhvK_iw';  // 🔹 Paste your Channel ID
-    const MAX_RESULTS = 50;  // YouTube API allows up to 50 videos per page
+    const API_KEY = 'AIzaSyDEkaytXf3Ox4qPHvt_N4NSlTEWPEawLUc'; 
+    const CHANNEL_ID = 'UC5Tcil1pp2Z8eJRRrhvK_iw'; 
+    const MAX_RESULTS = 50; 
 
     async function loadVideos(pageToken = '') {
       let url = `https://www.googleapis.com/youtube/v3/search?key=${API_KEY}&channelId=${CHANNEL_ID}&part=snippet,id&order=date&maxResults=${MAX_RESULTS}`;
       if (pageToken) url += `&pageToken=${pageToken}`;
 
-      const response = await fetch(url);
-      const data = await response.json();
+      try {
+          const response = await fetch(url);
+          const data = await response.json();
+          const container = document.getElementById('video-container');
 
-      const container = document.getElementById('video-container');
+          data.items.forEach(item => {
+            if (item.id.videoId) {
+              const videoWrapper = document.createElement('div');
+              videoWrapper.className = 'video-item';
+              videoWrapper.innerHTML = `
+                <iframe width="360" height="215" 
+                        src="https://www.youtube.com/embed/${item.id.videoId}" 
+                        frameborder="0" allowfullscreen>
+                </iframe>`;
+              container.appendChild(videoWrapper);
+            }
+          });
 
-      data.items.forEach(item => {
-        if (item.id.videoId) {
-          const iframe = document.createElement('iframe');
-          iframe.width = '360';
-          iframe.height = '215';
-          iframe.src = `https://www.youtube.com/embed/${item.id.videoId}`;
-          container.appendChild(iframe);
-        }
-      });
-
-      // 🔁 Load next batch if more videos exist
-      if (data.nextPageToken) {
-        await loadVideos(data.nextPageToken);
+          if (data.nextPageToken) {
+            await loadVideos(data.nextPageToken);
+          }
+      } catch (error) {
+          console.error("Error loading videos:", error);
       }
     }
-
     loadVideos();
   </script>
-  
-  
-  <!-- Yotube subscribe button   -->
-  <div class="subscribe">
-    <a href="https://www.youtube.com/channel/UC5Tcil1pp2Z8eJRRrhvK_iw?sub_confirmation=1" target="_blank" class="subscribe-btn">
-      <span class="icon">▶</span> Subscribe
-  </a>
-  </div>
-
-
-
-  <!-- FOOTER -->
 
   <footer>
     <div class="sociallinks">
       <a href="https://www.youtube.com/@M.Shayankhan-if5bs" target="_blank"><i class="fa-brands fa-youtube"></i></a>
-      <a href="https://www.facebook.com/profile.php?id=61551818460421" target="_blank"><i
-          class="fab fa-facebook"></i></a>
+      <a href="https://www.facebook.com/profile.php?id=61551818460421" target="_blank"><i class="fab fa-facebook"></i></a>
       <a href="https://www.instagram.com/shayan_shani_khan/" target="_blank"><i class="fab fa-instagram"></i></a>
-      <a href="https://whatsapp.com/channel/0029VbAt6hQ3WHTasuCiTx20" target="_blank"><i
-          class="fab fa-whatsapp"></i></a>
+      <a href="https://whatsapp.com/channel/0029VbAt6hQ3WHTasuCiTx20" target="_blank"><i class="fab fa-whatsapp"></i></a>
     </div>
-    <div class="rightreserved">&copy;2025 Shayan. All rights reserved.
-    </div>
+    <div class="rightreserved">&copy; 2025 شایان۔ جملہ حقوق محفوظ ہیں۔</div>
   </footer>
-</body>
 
+</body>
 </html>

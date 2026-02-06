@@ -1,17 +1,15 @@
-/* CSS Reset */
-body{
+/* CSS Reset & RTL Base */
+body {
     margin: 0;
     padding: 0;
     background: url('bg2.jpg');
-    /* background-size: cover; */
-    /* background-repeat: no-repeat; */
     font-family: 'Baloo Bhai 2', cursive;
     color: white;
+    direction: rtl; /* Key for Urdu Left-to-Right layout swap */
 }
 
-
 /* Header */
-.header{
+.header {
     position: fixed;
     z-index: 100;
     top: 0;
@@ -19,89 +17,75 @@ body{
     background-color: black;
     border: 2px solid white;
     margin: 10px 0;
-    height: auto;
+    height: 70px;
     border-radius: 10px;
     display: flex;
-    flex-wrap: wrap;
+    align-items: center;
     justify-content: space-between;
+    padding: 0 20px;
+    box-sizing: border-box;
 }
 
-/* Logo */
-.left{
-    position: relative;
-    z-index: 100;
-    top: 16px;
-    left: 14px;
-    display: inline-block;
-    width: auto;
-}
-.left img{
-    width: 250px;
-    margin-top: 3px;
-    margin-left: auto;
+/* Logo Section */
+.left img {
+    width: 200px;
+    margin-top: 5px;
 }
 
-/* nav */
-.right{
-    position: relative;
-    z-index: 100;
-    width: auto;
-    top: 0;
-    right: 83px;
-    display: inline-block;
+/* Hamburger Menu Button */
+.hamburger {
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
     color: white;
 }
-.navbar{
-    display: inline-block;
+
+/* Nav Bar */
+.navbar ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
 }
-.navbar li{
-    display: inline-block;
-    padding-left: 64px;
-    margin-bottom: 0;
+
+.navbar li {
+    margin-left: 40px; /* Space between items in RTL */
 }
-.navbar li a{
-    font-family: 'Baloo Bhai 2', cursive;
-    font-size: 20px;
-    font-weight: bold;
+
+.navbar li a {
     color: white;
     text-decoration: none;
-}
-.navbar li a:hover, .navbar li a.active {
-    font-family: 'Baloo Bhai 2', cursive;
-    font-size: 20px;
     font-weight: bold;
+    font-size: 18px;
+}
+
+.navbar li a:hover {
     color: rgb(114, 113, 113);
     text-decoration: underline;
 }
 
-
-
-/* Body */
-
-/* Past Papers and Mock papers */
-#pmheading{
-    display: block;
+/* Body Content */
+#pmheading {
     margin-top: 100px;
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 20px;
     text-align: center;
     font-weight: bold;
 }
 
-#PDFs{
+#PDFs {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
     margin: 20px;
 }
-#PDFs h2{
+
+#PDFs h2 {
     border-bottom: 2px solid white;
+    padding-bottom: 5px;
 }
-.pdf{
+
+.pdf {
     display: flex;
-    flex-direction: row-reverse;
+    flex-direction: row; /* Natural RTL flow */
     justify-content: space-between;
     align-items: center;
     width: 100%;              
@@ -109,10 +93,9 @@ body{
     margin: 10px auto;        
     padding: 10px;
     border-bottom: 1px dashed rgba(255,255,255,0.3); 
-    gap: 20px;
 }
-.pdf a{
-    display: inline-block;
+
+.pdf a {
     background-color: blue;
     color: white;
     padding: 10px 20px;
@@ -120,216 +103,74 @@ body{
     border: 3px solid white;
     font-weight: bolder;
     border-radius: 15px;
-    transition: background-color 0.3s ease;
-    margin-left: 40px;
+    transition: 0.3s;
 }
-.pdf a:hover{
+
+.pdf a:hover {
     background-color: rgba(0, 0, 255, 0.349);
 }
 
-/* Note */
-.note{
+.note {
     border: 2px solid white;
     margin: 20px;
-    padding: 10px;
+    padding: 15px;
     border-radius: 20px;
+    text-align: center;
 }
-
-
-
-
-
 
 /* Footer */
-footer{
-    margin-top: 100px;
-    display: block;
-    position: relative;
+footer {
+    margin-top: 50px;
     text-align: center;
 }
-/* Rightreserved */
-footer .rightreserved{
+
+.rightreserved {
     border-top: 2px solid white;
-    display: block;
     width: 33%;
-    margin: 0 auto;
-    align-items: center;
-    text-align: center;
+    margin: 10px auto;
+    padding-top: 10px;
 }
-/* social links */
-.sociallinks a{
-    display: inline-block;
+
+.sociallinks a {
     color: white;
-    margin: 5px;
+    margin: 0 10px;
+    font-size: 20px;
 }
 
-
-
-                       /* Past paper Tab for Tablet  */
-
-
-
-
-@media(max-width: 1150px) and (min-width:836px) {
-
-    /* Header */
-    .header {
-        position: relative;
-        z-index: 100;
-        top: 0;
-        width: 100%;
-        background-color: black;
-        border: 2px solid white;
-        margin: 10px 0;
-        height: auto;
-        border-radius: 10px;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        align-items: center;
-    }
-
-    /* Logo */
-    .left {
-        position: relative;
-        z-index: 100;
-        top: 16px;
-        left: 14px;
-        display: inline-block;
-        width: auto;
-    }
-
-    .left img {
-        width: 250px;
-        margin-top: 3px;
-        margin-left: auto;
-    }
-
-    /* nav */
-    .right {
-        position: relative;
-        z-index: 100;
-        width: auto;
-        top: 0;
-        right: 83px;
-        display: inline-block;
-        color: white;
-    }
-
-    .navbar {
-        display: inline-block;
-    }
-
-    .navbar li {
-        display: inline-block;
-        padding-left: 64px;
-        margin-bottom: 0;
-    }
-
-    .navbar li a {
-        font-family: 'Baloo Bhai 2', cursive;
-        font-size: 20px;
-        font-weight: bold;
-        color: white;
-        text-decoration: none;
-    }
-
-    .navbar li a:hover,
-    .navbar li a.active {
-        font-family: 'Baloo Bhai 2', cursive;
-        font-size: 20px;
-        font-weight: bold;
-        color: rgb(114, 113, 113);
-        text-decoration: underline;
-    }
-
-    /* Body */
-
-    
-}
-
-
-
-                                /* Home Tab for Phone  */
-
-
-
-
+/* Mobile Responsive */
 @media(max-width: 835px) {
+    .hamburger {
+        display: block;
+    }
 
-    /* Header */
-    .header {
-        position: relative;
-        z-index: 100;
-        top: 0;
-        width: 100%;
-        background-color: black;
-        border: 2px solid white;
-        margin: 10px 0;
-        height: auto;
-        border-radius: 10px;
-        display: flex;
+    .navbar ul {
+        display: none; /* Hide menu by default on mobile */
         flex-direction: column;
-        justify-content: space-between;
-        align-items: center;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        background: black;
+        border: 1px solid white;
+        border-radius: 0 0 10px 10px;
     }
 
-    /* Logo */
-    .left {
-        position: relative;
-        z-index: 100;
-        top: 16px;
-        left: 14px;
-        display: inline-block;
-        width: auto;
-    }
-
-    .left img {
-        width: 10rem;
-        margin-top: 3px;
-        margin-left: auto;
-    }
-
-    /* nav */
-    .right {
-        position: relative;
-        z-index: 100;
-        width: auto;
-        top: 0;
-        right: 83px;
-        display: inline-block;
-        color: white;
-    }
-
-    .navbar {
-        display: inline-block;
+    .navbar ul.active {
+        display: flex; /* Show when toggled */
     }
 
     .navbar li {
-        display: flex;
+        margin: 15px 0;
+        text-align: center;
+    }
+
+    .pdf {
         flex-direction: column;
-        padding-left: 64px;
-        margin-bottom: 0;
+        text-align: center;
+        gap: 15px;
     }
 
-    .navbar li a {
-        font-family: 'Baloo Bhai 2', cursive;
-        font-size: 20px;
-        font-weight: bold;
-        color: white;
-        text-decoration: none;
+    .rightreserved {
+        width: 80%;
     }
-
-    .navbar li a:hover,
-    .navbar li a.active {
-        font-family: 'Baloo Bhai 2', cursive;
-        font-size: 20px;
-        font-weight: bold;
-        color: rgb(114, 113, 113);
-        text-decoration: underline;
-    }
-
-    /* Body */
-    
-
 }
