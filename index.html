@@ -1,181 +1,95 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ur" dir="rtl">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Muhammad Shayan Khan</title>
-    <!-- Description and Keywords -->
+    <title>محمد شایان خان</title>
     <meta name="description"
-        content="Welcome! I’m Muhammad Shayan Khan, 🚀 Founder of MuhammadShayanKhan.co. > With a Matric score of 1026 and experience in three different board exam cycles, I know exactly where students struggle. Through this website, I provide curated past papers, mock exams, and strategic study guides designed to help you prepare smarter and maximize your marks.">
+        content="میں محمد شایان خان بن علی اصغر ہوں۔ میں پاکستان سے تعلق رکھتا ہوں۔ میں سپیریئر لالہ زار اسکول اینڈ کالج تھانہ میں میٹرک کا طالب علم ہوں۔ میری دلچسپی شطرنج کھیلنے اور کچھ نیا سیکھنے میں ہے۔ میں نے GFXmentor سے گرافک ڈیزائننگ (لوگو ڈیزائننگ) مکمل کی ہے۔ میں نے ایک جرمن کمپنی کے لیے کئی لوگو ڈیزائن کیے ہیں۔ اس وقت میں Code With Harry سے ویب ڈیولپمنٹ کا کورس کر رہا ہوں۔">
     <meta name="keywords"
-        content="Portfolio, shayan, Muhammad Shayan Khan, khan, muhammad, muhammad shayan khan, portfolio website, pestaso groups, pestaso education, pestaso designs, pestaso fashion, Mockpapers, past papers, board, board exam guidance">
-    <!-- CSS -->
+        content="پورٹ فولیو، شایان، محمد شایان خان، خان، محمد، محمد شایان، پورٹ فولیو ویب سائٹ، پیستاسو گروپس، پیستاسو ایجوکیشن، پیستاسو ڈیزائنز، پیستاسو فیشن، موق پیپرز، پرانے پرچے، بورڈ امتحان رہنمائی">
     <link rel="stylesheet" href="index.css">
-    <!-- Font -->
     <link href="https://fonts.googleapis.com/css2?family=Baloo+Bhai+2&display=swap" rel="stylesheet">
-    <!-- icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-    <!-- Favicon -->
     <link rel="shortcut icon" href="img.png" type="image/x-icon">
-    <!-- Right Click Disable -->
     <script>
-        // Disable right-click
+        // Disable right click and F12
         document.addEventListener('contextmenu', function (e) {
             e.preventDefault();
         });
-        // Disable specific keyboard shortcuts
         document.addEventListener('keydown', function (e) {
-            // F12
-            if (e.key === "F12") {
-                e.preventDefault();
-            }
-
-            // Ctrl+Shift+I or Ctrl+Shift+J or Ctrl+U or Ctrl+S
+            if (e.key === "F12") e.preventDefault();
             if (
                 (e.ctrlKey && e.shiftKey && (e.key === 'I' || e.key === 'J')) ||
                 (e.ctrlKey && (e.key === 'U' || e.key === 'S'))
-            ) {
-                e.preventDefault();
-            }
+            ) e.preventDefault();
         });
 
-        
-
-
-        // Announcement
+        // Popup logic
         window.onload = function () {
-    document.getElementById('popupbox').style.display = 'flex';
-};
-function closepopup() {
-    document.getElementById('popupbox').style.display = 'none';
-};
+            document.getElementById('popupbox').style.display = 'flex';
+        };
+        function closepopup() {
+            document.getElementById('popupbox').style.display = 'none';
+        };
 
-
-
+       
+        // Hamburger Toggle Function
+        function toggleMenu() {
+            const nav = document.getElementById('navbar-list');
+            nav.classList.toggle('active');
+        }
     </script>
-
-
-
 </head>
-
 
 <body>
 
-    <!-- HEADER -->
-
     <header class="header">
-        <!-- Div for logo -->
         <div class="left">
-            <a href="index.html"><img src="logo.png" alt="Muhammad Shayan Khan"></a>
+            <a href="index.html"><img src="logo.png" alt="محمد شایان خان"></a>
         </div>
-        <!-- Div for nav bar -->
+        
+        <div class="hamburger" onclick="toggleMenu()">
+            <i class="fas fa-bars"></i>
+        </div>
+
         <div class="right">
             <nav class="navbar">
-                <ul>
-                    <li><a href="index.html" class="active">Home</a></li>
-                    <li><a href="videos.html">Videos</a></li>
-                    <li><a href="awards.html">My Awards</a></li>
-                    <li><a href="shop.html">Shop</a></li>
-                    <li><a href="contact.html">Contact Shayan</a></li>
+                <ul id="navbar-list">
+                    <li><a href="index.html">ہوم پیج</a></li>
+                    <li><a href="videos.html">ویڈیوز</a></li>
+                    <li><a href="awards.html">میرے ایوارڈز</a></li>
+                    <li><a href="contact.html">رابطہ کریں</a></li>
                 </ul>
             </nav>
         </div>
     </header>
-    <!-- BODY -->
-
-
-                <!-- Container -->
 
     <div class="container">
-
+        <p>"میں <span>محمد شایان خان</span> ہوں۔ میں نے میٹرک میں 1026 نمبر حاصل کیے۔ میں نے تین مرتبہ بورڈ امتحان میں شرکت کی ہے جس سے مجھے قیمتی تجربہ حاصل ہوا۔ اس ویب سائٹ کے ذریعے میرا مقصد آپ کو بہتر تیاری کے طریقے سکھانا ہے تاکہ آپ زیادہ نمبر حاصل کر سکیں۔ یہاں آپ کو پرانے پرچے، موق امتحانات، اور مفید تعلیمی مواد ملے گا۔"</p>
         <img src="img.png" alt="" class="shayanimg">
-
-        <p>"Welcome! I’m <span>Muhammad Shayan Khan, 🚀 Founder of MuhammadShayanKhan.co.</span> With a Matric score of 1026 and experience in three different board exam cycles, I know exactly where students struggle. Through this website, I provide curated past papers, mock exams, and strategic study guides designed to help you prepare smarter and maximize your marks."</p>
-
-
-
-
-
     </div>
 
-
-    <!-- Past Papers and Mock Papers -->
     <div class="past-paper-button">
-        <a href="pastpapers.html" class="btn">View Past Papers and Mock Papers</a>
+        <a href="pastpapers.html" class="btn">پرانے اور موق پرچے دیکھیں</a>
     </div>
 
+   
 
-    <!-- Question Poll -->
-     <div class="poll">
-        <h2>Question To Answer</h2>
-        <div class="question">
-            Q. Do you prefer PDF downloads or online reading?
-        </div>
-        <div class="anserbtn">
-            <a href="https://mail.google.com/mail/?view=cm&fs=1&to=mshanskhan342@gmail.com" target="_blank">Email Your Answer</a>
-        </div>
-     </div>
-
-
-    <!-- 🔔 Notification Box -->
-<div class="notification-box">
-    <h2>Latest News & Updates</h2>
-    <div class="news-container">
-        <ul class="news-list">
-            <li>📢 "How to Study Smart, Not Hard | Smart Study Techniques" Video is Available<a href="https://youtu.be/cvbvighYyG0?si=VA9DL10hDvcHIaKA">Check here</a></li>
-            <li>📢 Video On "How to Study Smart, Not Hard | Smart Study Techniques" will be Published on 29-Aug-2025 7:00P.M </li>
-            <li>📢 Mock Papers for Class 10 are now available! <a href="pastpapers.html">Check here</a></li>
-            <li>📢 "5 Habits That Turn Average Students into Toppers" Video is Available<a href="https://youtu.be/aQu80L-fKU0">Check here</a></li>
-            <li>📢 Video On "5 Habits That Turn Average Students into Toppers" will be Published on 20-Aug-2025 7:00P.M</li>
-            <li>📢 "Is Failure is Important in Life? | Success After Failure" Video is Available</li>
-            <li>📢 Bise Malakand Class 10 Past Papers is Available <a href="pastpapers.html">Check here</a></li>
-            <li>📢 Bise Malakand Class 9 Past Papers is Available <a href="pastpapers.html">Check here</a></li>
-        </ul>
-    </div>
-</div>
-
-
-
-
-
-
-    <!-- FOOTER -->
+    
 
     <footer>
-    <div class="sociallinks">
-      <a href="https://www.youtube.com/@M.Shayankhan-if5bs" target="_blank"><i class="fa-brands fa-youtube"></i></a>
-      
-    
-      <a href="https://whatsapp.com/channel/0029VbAt6hQ3WHTasuCiTx20" target="_blank"><i
-          class="fab fa-whatsapp"></i></a>
-    </div>
-    <div class="rightreserved">&copy;2025 Shayan. All rights reserved.
-    </div>
-  </footer>
-
-
-
-    <!-- Announcement Popup -->
-    <div id="popupbox" class="popup">
-        <div class="popup-content">
-            <span class="class-btn" onclick="closepopup()">&times;</span>
-        <h3><span style="color: red;">&#9733;</span> Announcement</h3>
-        <img src="Banner.png" alt="">
-            <div class="past-paper-button">
-            <a href="pastpapers.html" class="btn">View Mock Papers</a>
+        <div class="sociallinks">
+            <a href="https://www.youtube.com/@M.Shayankhan-if5bs" target="_blank"><i class="fa-brands fa-youtube"></i></a>
+            <a href="https://www.facebook.com/profile.php?id=61551818460421" target="_blank"><i class="fab fa-facebook"></i></a>
+            <a href="https://www.instagram.com/shayan_shani_khan/" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="https://whatsapp.com/channel/0029VbAt6hQ3WHTasuCiTx20" target="_blank"><i class="fab fa-whatsapp"></i></a>
         </div>
-        </div>
-    </div>
-
+        <div class="rightreserved">&copy; 2025 شایان۔ جملہ حقوق محفوظ ہیں۔</div>
+    </footer>
 
     
-
-
 
 </body>
-
 </html>
-
-
-
