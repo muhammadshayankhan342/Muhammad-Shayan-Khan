@@ -1,19 +1,22 @@
-/* CSS Reset */
+/* --- CSS Reset & Global Styles --- */
 body {
     margin: 0;
     padding: 0;
-    background: url('bg2.jpg');
+    background: url('bg2.jpg'); 
+    background-color: #000; /* بیک گراؤنڈ امیج نہ ہونے کی صورت میں کالا رنگ */
     font-family: 'Baloo Bhai 2', cursive;
     color: white;
-    direction: rtl;
+    direction: rtl; /* اردو کے لیے رائٹ ٹو لیفٹ */
     text-align: right;
+    overflow-x: hidden; /* موبائل پر سائیڈ اسکرولنگ ختم کرنے کے لیے */
 }
 
-/* Header */
+/* --- Header & Navigation --- */
 .header {
     position: fixed;
-    z-index: 100;
+    z-index: 1000;
     top: 0;
+    /* left: 2%; */
     width: 100%;
     background-color: black;
     border: 2px solid white;
@@ -27,13 +30,12 @@ body {
     box-sizing: border-box;
 }
 
-/* Logo */
 .left img {
-    width: 200px;
+    width: 180px;
     margin-top: 3px;
+    display: block;
 }
 
-/* Nav Desktop */
 .navbar ul {
     display: flex;
     list-style: none;
@@ -50,15 +52,16 @@ body {
     font-weight: bold;
     color: white;
     text-decoration: none;
+    transition: 0.3s;
 }
 
 .navbar li a:hover,
 .navbar li a.active {
-    color: rgb(114, 113, 113);
+    color: #727171;
     text-decoration: underline;
 }
 
-/* Hamburger & Mobile Icons */
+/* --- Hamburger Menu Icon --- */
 .hamburger {
     display: none;
     cursor: pointer;
@@ -66,59 +69,64 @@ body {
     color: white;
 }
 
-.close-menu {
-    display: none;
-}
-
-/* Container */
+/* --- Main Container (Home Page Fixes) --- */
 .container {
     display: flex;
+    flex-direction: row; /* ڈیسک ٹاپ پر تصویر اور تحریر برابر میں */
     flex-wrap: wrap;
     position: relative;
-    margin: 120px auto 50px auto;
-    width: 90%;
+    margin: 140px auto 50px auto;
+    width: 85%;
     align-items: center;
+    justify-content: center;
+    gap: 40px;
 }
 
 .container .shayanimg {
-    height: 387px;
-    margin: auto;
+    height: 350px;
+    width: 350px;
+    object-fit: cover;
+    border-radius: 50%; /* تصویر کو گول رکھنے کے لیے */
+    border: 3px solid white;
 }
 
 p {
-    font-size: 28px;
-    margin: auto;
-    width: 60%;
+    font-size: 26px;
+    margin: 0;
+    width: 55%;
     line-height: 1.6;
 }
 
 .container p span {
     font-weight: bolder;
+    color: #ccc;
 }
 
-/* Buttons */
+/* --- Buttons --- */
 .past-paper-button {
     text-align: center;
-    margin: 20px 0;
+    margin: 30px 0;
 }
 
 .past-paper-button .btn {
     display: inline-block;
     background-color: #000;
     color: white;
-    padding: 10px 30px;
+    padding: 12px 35px;
     text-decoration: none;
     border: 3px solid white;
     font-weight: bolder;
+    font-size: 20px;
     border-radius: 15px;
-    transition: background-color 0.3s ease;
+    transition: all 0.3s ease;
 }
 
 .past-paper-button .btn:hover {
-    background-color: #353535;
+    background-color: white;
+    color: black;
 }
 
-/* Poll & Notifications */
+/* --- Poll & Notification Boxes --- */
 .poll, .notification-box {
     margin: 30px auto;
     max-width: 800px;
@@ -129,125 +137,91 @@ p {
     padding: 20px;
 }
 
-.poll h2, .notification-box h2 {
-    border-bottom: 1px solid #444;
-    padding-bottom: 10px;
-    margin-bottom: 15px;
-}
-
-.anserbtn {
-    margin-top: 15px;
-}
-
-.anserbtn a {
-    text-decoration: none;
-    color: white;
-    background-color: blue;
-    padding: 8px 20px;
-    border: 1px solid white;
-    border-radius: 10px;
-}
-
-.news-container {
-    max-height: 200px;
-    overflow-y: auto;
-}
-
-.news-list {
-    list-style: none;
-    padding: 0;
-}
-
-.news-list li {
-    padding: 10px 0;
-    border-bottom: 1px solid #333;
-}
-
-/* Footer */
+/* --- Footer --- */
 footer {
-    margin-top: 50px;
+    margin-top: 60px;
     text-align: center;
-    padding-bottom: 20px;
+    padding-bottom: 30px;
+}
+
+.sociallinks a {
+    color: white;
+    margin: 0 15px;
+    font-size: 26px;
+    transition: 0.3s;
+}
+
+.sociallinks a:hover {
+    color: #aaa;
 }
 
 .rightreserved {
     border-top: 2px solid white;
     width: 50%;
     margin: 20px auto;
-    padding-top: 10px;
+    padding-top: 15px;
 }
 
-.sociallinks a {
-    color: white;
-    margin: 0 10px;
-    font-size: 24px;
-}
-
-/* Popup */
-.popup {
-    display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(255, 255, 255, 0.8);
-    z-index: 1000;
-    justify-content: center;
-    align-items: center;
-}
-
-.popup-content {
-    background: black;
-    padding: 30px;
-    border-radius: 15px;
-    border: 2px solid white;
-    position: relative;
-    text-align: center;
-}
-
-.class-btn {
-    position: absolute;
-    top: 10px;
-    right: 20px;
-    font-size: 30px;
-    cursor: pointer;
-}
-
-/* Mobile Responsive */
-@media(max-width: 835px) {
-    .hamburger {
-        display: block;
+/* --- MOBILE RESPONSIVE FIXES (موبائل کے لیے تبدیلیاں) --- */
+@media (max-width: 835px) {
+    .header {
+        height: 60px;
+        width: 100%;
     }
 
+    .left img {
+        width: 140px;
+    }
+
+    .hamburger {
+        display: block; 
+    }
+
+    
+    .container {
+        flex-direction: column; 
+        margin-top: 100px;
+        width: 90%;
+        text-align: center;
+    }
+
+    .container .shayanimg {
+        height: 250px;
+        width: 250px;
+        margin-bottom: 20px;
+    }
+
+    p {
+        width: 100%;
+        font-size: 18px;
+        text-align: center;
+    }
+
+    /* موبائل مینو ڈراپ ڈاؤن */
     .navbar ul {
-        display: none; /* Hide menu by default on mobile */
+        display: none; 
         flex-direction: column;
         position: absolute;
-        top: 70px;
-        left: 0;
-        width: 100%;
+        top: 58px;
+        right: -2px;
+        width: 101%;
         background: black;
-        border: 1px solid white;
+        border: 2px solid white;
         border-radius: 0 0 10px 10px;
+        padding: 20px 0;
     }
 
     .navbar ul.active {
-        display: flex; /* Show when toggled */
+        display: flex; 
     }
 
     .navbar li {
-        margin: 15px 0;
+        padding: 15px 0;
+        margin: 0;
         text-align: center;
-    }
-
-    .pdf {
-        flex-direction: column;
-        text-align: center;
-        gap: 15px;
     }
 
     .rightreserved {
-        width: 80%;
+        width: 85%;
     }
 }
