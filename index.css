@@ -31,7 +31,7 @@ body {
 }
 
 .left img {
-    width: 180px;
+    width: 200px;
     margin-top: 3px;
     display: block;
 }
@@ -170,7 +170,7 @@ footer {
     }
 
     .left img {
-        width: 140px;
+        width: 180px;
     }
 
     .hamburger {
@@ -225,3 +225,4 @@ footer {
         width: 85%;
     }
 }
+
