@@ -86,11 +86,11 @@ body {
     height: 350px;
     width: 350px;
     object-fit: cover;
-    border-radius: 50%; /* تصویر کو گول رکھنے کے لیے */
+    border-radius: 50%; 
     border: 3px solid white;
 }
 
-p {
+.container p {
     font-size: 26px;
     margin: 0;
     width: 55%;
@@ -137,29 +137,120 @@ p {
     padding: 20px;
 }
 
+
+/* partners */
+.ph{
+    text-align: center;
+    padding: 10px;
+    margin-top: 60px;
+    margin-bottom: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    text-decoration: underline;
+    font-size: 30px;
+    font-weight: bolder;
+}
+.partners{
+    position: relative;
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    padding: 10px;
+}
+.partners::before{
+    content: '';
+    background-color: black;
+    opacity: 30%;
+    position: absolute;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+}
+.partners img{
+    width: 125px;
+    transition: transform 0.3s ease;
+    margin: 20px;
+}
+.partners img:hover{
+    transform: scale(1.05);
+}
+
+
 /* --- Footer --- */
 footer {
     margin-top: 60px;
+    align-items: center;
+    padding-bottom: 15px;
+   position: relative;
+   color: white;
+}
+footer h2{
+    text-decoration: underline;
+}
+.fgrid{
+    display: grid;
+   grid-template-columns: repeat(2, 1fr);
+   padding: 30px;
+   direction: ltr;
+   text-align: center;
+   justify-content: center;
+   align-items: center;
+}
+.sociallinks{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.sociallinks ul{
     text-align: center;
-    padding-bottom: 30px;
+    list-style: none;
+    padding: 0;
 }
-
-.sociallinks a {
+.sociallinks ul li{
+    margin: 10px;
+    transition: transform 0.3s ease;
     color: white;
-    margin: 0 15px;
-    font-size: 26px;
-    transition: 0.3s;
+}
+.sociallinks ul a{
+    text-decoration: none;
+    color: white;
+}
+.sociallinks ul li:hover{
+    text-decoration: underline;
+    transform: scale(1.1);
+}
+.aboutus{
+    padding: 10px;
+    border-right: 4px solid white;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+footer::before{
+    content: '';
+    position: absolute;
+    color: white;
+    background-color: black;
+    opacity: 60%;
+    width: 100%;
+    height: 100%;
+    z-index: -2;
 }
 
-.sociallinks a:hover {
-    color: #aaa;
-}
+
 
 .rightreserved {
     border-top: 2px solid white;
     width: 50%;
     margin: 20px auto;
     padding-top: 15px;
+    text-align: center;
+    position: relative;
 }
 
 /* --- MOBILE RESPONSIVE FIXES (موبائل کے لیے تبدیلیاں) --- */
@@ -170,7 +261,7 @@ footer {
     }
 
     .left img {
-        width: 180px;
+        width: 200px;
     }
 
     .hamburger {
@@ -191,7 +282,7 @@ footer {
         margin-bottom: 20px;
     }
 
-    p {
+    .container p {
         width: 100%;
         font-size: 18px;
         text-align: center;
@@ -212,7 +303,7 @@ footer {
     }
 
     .navbar ul.active {
-        display: flex; 
+        display: flex; /* جب بٹن دبائیں تو مینو کھل جائے */
     }
 
     .navbar li {
@@ -221,8 +312,109 @@ footer {
         text-align: center;
     }
 
-    .rightreserved {
-        width: 85%;
-    }
+    /* partners */
+.ph{
+    text-align: center;
+    padding: 10px;
+    margin-top: 60px;
+    margin-bottom: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    text-decoration: underline;
+    font-size: 27px;
+    font-weight: bolder;
+}
+.partners{
+    position: relative;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    padding: 20px;
+}
+.partners::before{
+    content: '';
+    background-color: black;
+    opacity: 30%;
+    position: absolute;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+}
+.partners img{
+    width: 120px;
+    transition: transform 0.3s ease;
+    margin: 15px;
 }
 
+
+
+/* --- Footer --- */
+footer {
+    margin-top: 60px;
+    align-items: center;
+    padding-bottom: 15px;
+   position: relative;
+   color: white;
+}
+footer h2{
+    text-decoration: underline;
+}
+.fgrid{
+    display: flex;
+    flex-direction: column;
+}
+.sociallinks{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+.sociallinks ul{
+    text-align: center;
+    list-style: none;
+    padding: 0;
+}
+.sociallinks ul li{
+    transition: transform 0.3s ease;
+    color: white;
+}
+.sociallinks ul a{
+    text-decoration: none;
+    color: white;
+}
+.sociallinks ul li:hover{
+    text-decoration: underline;
+    transform: scale(1.1);
+}
+.aboutus{
+   border-bottom: 4px solid white;
+   border-right: none;
+}
+footer::before{
+    content: '';
+    position: absolute;
+    color: white;
+    background-color: black;
+    opacity: 60%;
+    width: 100%;
+    height: 100%;
+    z-index: -2;
+}
+
+
+
+.rightreserved {
+    border-top: 2px solid white;
+    width: 50%;
+    margin: 20px auto;
+    padding-top: 15px;
+    text-align: center;
+    width: 85%;
+}
+
+
+
+}
