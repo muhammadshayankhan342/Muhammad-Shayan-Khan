@@ -319,13 +319,13 @@ footer::before{
 .post{
     display: flex;
     flex-direction: column;
-    width: 500px;
+    width: 300px;
     align-items: center;
     justify-content: center;
     margin: auto;
 }
 .pst{
-    width: 350px;
+    width: 300px;
 }
 
     /* partners */
