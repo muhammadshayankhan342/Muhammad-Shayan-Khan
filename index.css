@@ -126,15 +126,17 @@ body {
     color: black;
 }
 
-/* --- Poll & Notification Boxes --- */
-.poll, .notification-box {
-    margin: 30px auto;
-    max-width: 800px;
-    background: #111;
-    color: #fff;
-    border-right: 5px solid #fff;
-    border-radius: 10px;
-    padding: 20px;
+/* post */
+.post{
+    display: flex;
+    flex-direction: column;
+    width: 800px;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+}
+.pst{
+    width: 500px;
 }
 
 
@@ -311,6 +313,20 @@ footer::before{
         margin: 0;
         text-align: center;
     }
+
+
+    /* post */
+.post{
+    display: flex;
+    flex-direction: column;
+    width: 500px;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+}
+.pst{
+    width: 350px;
+}
 
     /* partners */
 .ph{
