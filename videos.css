@@ -1,12 +1,12 @@
-/* CSS Reset & Urdu RTL */
+/* CSS Reset & LTR Base */
 body {
     margin: 0;
     padding: 0;
     background: url('bg2.jpg');
-    font-family: 'Baloo Bhai 2', cursive;
+    font-family: 'Baloo Bhai 2', cursive, sans-serif;
     color: white;
-    direction: rtl;
-    text-align: right;
+    direction: ltr;
+    text-align: left;
 }
 
 /* Header */
@@ -14,10 +14,12 @@ body {
     position: fixed;
     z-index: 100;
     top: 0;
-    width: 100%;
+    left: 0;
+    right: 0;
+    width: calc(100% - 20px);
     background-color: black;
     border: 2px solid white;
-    margin: 10px 0;
+    margin: 10px auto;
     height: 70px;
     border-radius: 10px;
     display: flex;
@@ -41,7 +43,12 @@ body {
 }
 
 .navbar li {
-    padding-right: 40px;
+    padding-left: 30px; /* Switched spacing for LTR flow */
+    padding-right: 0;
+}
+
+.navbar li:first-child {
+    padding-left: 0;
 }
 
 .navbar li a {
@@ -89,6 +96,7 @@ body {
 .video-item iframe {
     border: 2px solid white;
     border-radius: 10px;
+    max-width: 100%;
 }
 
 /* Subscribe Section */
@@ -118,80 +126,83 @@ body {
 /* Footer */
 footer {
     margin-top: 60px;
-    align-items: center;
-    padding-bottom: 15px;
-   position: relative;
-   color: white;
+    position: relative;
+    color: white;
 }
-footer h2{
+
+footer h2 {
     text-decoration: underline;
 }
-.fgrid{
+
+.fgrid {
     display: grid;
-   grid-template-columns: repeat(2, 1fr);
-   padding: 30px;
-   direction: ltr;
-   text-align: center;
-   justify-content: center;
-   align-items: center;
+    grid-template-columns: 1fr 1fr;
+    padding: 30px;
+    direction: ltr;
+    text-align: center;
+    align-items: start;
+    max-width: 1000px;
+    margin: 0 auto;
 }
-.sociallinks{
+
+.aboutus {
+    padding: 10px 20px;
+    border-right: 4px solid white; /* Divider between About Us and Social Links */
+    text-align: center;
+}
+
+.sociallinks {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    padding: 10px 20px;
 }
-.sociallinks ul{
+
+.sociallinks ul {
     text-align: center;
     list-style: none;
     padding: 0;
+    margin: 0;
 }
-.sociallinks ul li{
-    margin: 10px;
+
+.sociallinks ul li {
+    margin: 10px 0;
     transition: transform 0.3s ease;
-    color: white;
 }
-.sociallinks ul a{
+
+.sociallinks ul a {
     text-decoration: none;
     color: white;
 }
-.sociallinks ul li:hover{
+
+.sociallinks ul li:hover {
     text-decoration: underline;
-    transform: scale(1.1);
+    transform: scale(1.08);
 }
-.aboutus{
-    padding: 10px;
-    border-right: 4px solid white;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
-footer::before{
+
+footer::before {
     content: '';
     position: absolute;
-    color: white;
+    top: 0;
+    left: 0;
     background-color: black;
-    opacity: 60%;
+    opacity: 0.6;
     width: 100%;
     height: 100%;
-    z-index: -2;
+    z-index: -1;
 }
-
-
 
 .rightreserved {
     border-top: 2px solid white;
     width: 50%;
-    margin: 20px auto;
+    margin: 20px auto 0 auto;
     padding-top: 15px;
     text-align: center;
     position: relative;
 }
 
-/* Mobile Responsive */
-@media(max-width: 835px) {
+/* Mobile & Tablet Responsiveness */
+@media (max-width: 835px) {
     .hamburger {
         display: block;
     }
@@ -200,91 +211,39 @@ footer::before{
         display: none; /* Hide menu by default on mobile */
         flex-direction: column;
         position: absolute;
-        top: 70px;
+        top: 68px;
         left: 0;
         width: 100%;
         background: black;
         border: 1px solid white;
         border-radius: 0 0 10px 10px;
+        padding: 10px 0;
     }
 
     .navbar ul.active {
-        display: flex; /* Show when toggled */
+        display: flex; /* Display when toggled */
     }
 
     .navbar li {
         margin: 15px 0;
-        text-align: center;
-    }
-
-    .pdf {
-        flex-direction: column;
-        text-align: center;
-        gap: 15px;
-    }
-
-    footer {
-        margin-top: 60px;
-        align-items: center;
-        padding-bottom: 15px;
-       position: relative;
-       color: white;
-    }
-    footer h2{
-        text-decoration: underline;
-    }
-    .fgrid{
-        display: flex;
-        flex-direction: column;
-    }
-    .sociallinks{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        text-align: center;
-    }
-    .sociallinks ul{
-        text-align: center;
-        list-style: none;
         padding: 0;
-    }
-    .sociallinks ul li{
-        transition: transform 0.3s ease;
-        color: white;
-    }
-    .sociallinks ul a{
-        text-decoration: none;
-        color: white;
-    }
-    .sociallinks ul li:hover{
-        text-decoration: underline;
-        transform: scale(1.1);
-    }
-    .aboutus{
-       border-bottom: 4px solid white;
-       border-right: none;
-    }
-    footer::before{
-        content: '';
-        position: absolute;
-        color: white;
-        background-color: black;
-        opacity: 60%;
-        width: 100%;
-        height: 100%;
-        z-index: -2;
-    }
-    
-    
-    
-    .rightreserved {
-        border-top: 2px solid white;
-        width: 50%;
-        margin: 20px auto;
-        padding-top: 15px;
         text-align: center;
+    }
+
+    .fgrid {
+        display: flex;
+        flex-direction: column;
+        padding: 15px;
+    }
+
+    .aboutus {
+        border-right: none;
+        border-bottom: 4px solid white;
+        padding-bottom: 20px;
+        margin-bottom: 20px;
+    }
+
+    .rightreserved {
         width: 85%;
     }
-
 }

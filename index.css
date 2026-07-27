@@ -1,14 +1,18 @@
 /* --- CSS Reset & Global Styles --- */
+* {
+    box-sizing: border-box;
+}
+
 body {
     margin: 0;
     padding: 0;
     background: url('bg2.jpg'); 
-    background-color: #000; /* بیک گراؤنڈ امیج نہ ہونے کی صورت میں کالا رنگ */
-    font-family: 'Baloo Bhai 2', cursive;
+    background-color: #000; /* Fallback black background */
+    font-family: 'Poppins', sans-serif;
     color: white;
-    direction: rtl; /* اردو کے لیے رائٹ ٹو لیفٹ */
-    text-align: right;
-    overflow-x: hidden; /* موبائل پر سائیڈ اسکرولنگ ختم کرنے کے لیے */
+    direction: ltr; /* English LTR layout */
+    text-align: left;
+    overflow-x: hidden;
 }
 
 /* --- Header & Navigation --- */
@@ -16,7 +20,7 @@ body {
     position: fixed;
     z-index: 1000;
     top: 0;
-    /* left: 2%; */
+    left: 0;
     width: 100%;
     background-color: black;
     border: 2px solid white;
@@ -27,7 +31,6 @@ body {
     justify-content: space-between;
     align-items: center;
     padding: 0 20px;
-    box-sizing: border-box;
 }
 
 .left img {
@@ -44,12 +47,12 @@ body {
 }
 
 .navbar li {
-    padding-right: 40px;
+    padding-left: 30px;
 }
 
 .navbar li a {
-    font-size: 20px;
-    font-weight: bold;
+    font-size: 18px;
+    font-weight: 600;
     color: white;
     text-decoration: none;
     transition: 0.3s;
@@ -69,10 +72,10 @@ body {
     color: white;
 }
 
-/* --- Main Container (Home Page Fixes) --- */
+/* --- Main Container (Desktop Layout) --- */
 .container {
     display: flex;
-    flex-direction: row; /* ڈیسک ٹاپ پر تصویر اور تحریر برابر میں */
+    flex-direction: row;
     flex-wrap: wrap;
     position: relative;
     margin: 140px auto 50px auto;
@@ -83,22 +86,23 @@ body {
 }
 
 .container .shayanimg {
-    height: 350px;
-    width: 350px;
+    height: 320px;
+    width: 320px;
     object-fit: cover;
     border-radius: 50%; 
     border: 3px solid white;
 }
 
 .container p {
-    font-size: 26px;
+    font-size: 20px;
     margin: 0;
     width: 55%;
-    line-height: 1.6;
+    line-height: 1.7;
+    text-align: left;
 }
 
 .container p span {
-    font-weight: bolder;
+    font-weight: 700;
     color: #ccc;
 }
 
@@ -115,8 +119,8 @@ body {
     padding: 12px 35px;
     text-decoration: none;
     border: 3px solid white;
-    font-weight: bolder;
-    font-size: 20px;
+    font-weight: 700;
+    font-size: 18px;
     border-radius: 15px;
     transition: all 0.3s ease;
 }
@@ -126,162 +130,175 @@ body {
     color: black;
 }
 
-/* post */
-.post{
+/* --- Post Section --- */
+.post {
     display: flex;
     flex-direction: column;
-    width: 800px;
+    max-width: 800px;
+    width: 90%;
     align-items: center;
     justify-content: center;
-    margin: auto;
-}
-.pst{
-    width: 500px;
+    margin: 0 auto;
+    text-align: center;
 }
 
+.pst {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+}
 
-/* partners */
-.ph{
+/* --- Partners Section --- */
+.ph {
     text-align: center;
     padding: 10px;
     margin-top: 60px;
     margin-bottom: 20px;
-    margin-left: auto;
-    margin-right: auto;
     text-decoration: underline;
-    font-size: 30px;
-    font-weight: bolder;
+    font-size: 28px;
+    font-weight: 700;
 }
-.partners{
+
+.partners {
     position: relative;
-    align-items: center;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: space-evenly;
-    padding: 10px;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    padding: 20px;
 }
-.partners::before{
+
+.partners::before {
     content: '';
     background-color: black;
-    opacity: 30%;
+    opacity: 0.3;
     position: absolute;
     z-index: -1;
     width: 100%;
     height: 100%;
-}
-.partners img{
-    width: 125px;
-    transition: transform 0.3s ease;
-    margin: 20px;
-}
-.partners img:hover{
-    transform: scale(1.05);
+    top: 0;
+    left: 0;
 }
 
+.partners img {
+    width: 125px;
+    transition: transform 0.3s ease;
+    margin: 10px;
+}
+
+.partners img:hover {
+    transform: scale(1.05);
+}
 
 /* --- Footer --- */
 footer {
     margin-top: 60px;
-    align-items: center;
+    position: relative;
+    color: white;
     padding-bottom: 15px;
-   position: relative;
-   color: white;
 }
-footer h2{
+
+footer h2 {
     text-decoration: underline;
+    margin-bottom: 15px;
 }
-.fgrid{
+
+.fgrid {
     display: grid;
-   grid-template-columns: repeat(2, 1fr);
-   padding: 30px;
-   direction: ltr;
-   text-align: center;
-   justify-content: center;
-   align-items: center;
-}
-.sociallinks{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
-.sociallinks ul{
+    grid-template-columns: repeat(2, 1fr);
+    padding: 30px;
+    direction: ltr;
     text-align: center;
-    list-style: none;
-    padding: 0;
+    align-items: start;
 }
-.sociallinks ul li{
-    margin: 10px;
-    transition: transform 0.3s ease;
-    color: white;
-}
-.sociallinks ul a{
-    text-decoration: none;
-    color: white;
-}
-.sociallinks ul li:hover{
-    text-decoration: underline;
-    transform: scale(1.1);
-}
-.aboutus{
-    padding: 10px;
+
+.aboutus {
+    padding: 10px 20px;
     border-right: 4px solid white;
     text-align: center;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
 }
-footer::before{
+
+.sociallinks {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 20px;
+}
+
+.sociallinks ul {
+    text-align: center;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.sociallinks ul li {
+    margin: 10px 0;
+    transition: transform 0.3s ease;
+}
+
+.sociallinks ul a {
+    text-decoration: none;
+    color: white;
+}
+
+.sociallinks ul li:hover {
+    text-decoration: underline;
+    transform: scale(1.05);
+}
+
+footer::before {
     content: '';
     position: absolute;
-    color: white;
     background-color: black;
-    opacity: 60%;
+    opacity: 0.6;
     width: 100%;
     height: 100%;
+    top: 0;
+    left: 0;
     z-index: -2;
 }
-
-
 
 .rightreserved {
     border-top: 2px solid white;
     width: 50%;
-    margin: 20px auto;
+    margin: 20px auto 0 auto;
     padding-top: 15px;
     text-align: center;
     position: relative;
 }
 
-/* --- MOBILE RESPONSIVE FIXES (موبائل کے لیے تبدیلیاں) --- */
+/* --- TABLET RESPONSIVE (Between 576px and 835px) --- */
 @media (max-width: 835px) {
     .header {
         height: 60px;
-        width: 100%;
     }
 
     .left img {
-        width: 200px;
+        width: 180px;
     }
 
     .hamburger {
         display: block; 
     }
 
-    
     .container {
         flex-direction: column; 
-        margin-top: 100px;
+        margin-top: 110px;
         width: 90%;
         text-align: center;
+        gap: 25px;
     }
 
     .container .shayanimg {
         height: 250px;
         width: 250px;
-        margin-bottom: 20px;
     }
 
     .container p {
@@ -290,147 +307,81 @@ footer::before{
         text-align: center;
     }
 
-    /* موبائل مینو ڈراپ ڈاؤن */
+    /* Mobile / Tablet Nav Dropdown */
     .navbar ul {
         display: none; 
         flex-direction: column;
         position: absolute;
         top: 58px;
-        right: -2px;
-        width: 101%;
+        left: 0;
+        width: 100%;
         background: black;
         border: 2px solid white;
         border-radius: 0 0 10px 10px;
-        padding: 20px 0;
+        padding: 15px 0;
     }
 
     .navbar ul.active {
-        display: flex; /* جب بٹن دبائیں تو مینو کھل جائے */
+        display: flex;
     }
 
     .navbar li {
-        padding: 15px 0;
+        padding: 12px 0;
         margin: 0;
         text-align: center;
     }
 
+    .post {
+        width: 90%;
+    }
 
-    /* post */
-.post{
-    display: flex;
-    flex-direction: column;
-    width: 300px;
-    align-items: center;
-    justify-content: center;
-    margin: auto;
-}
-.pst{
-    width: 300px;
-}
+    .pst {
+        width: 100%;
+        max-width: 350px;
+    }
 
-    /* partners */
-.ph{
-    text-align: center;
-    padding: 10px;
-    margin-top: 60px;
-    margin-bottom: 20px;
-    margin-left: auto;
-    margin-right: auto;
-    text-decoration: underline;
-    font-size: 27px;
-    font-weight: bolder;
-}
-.partners{
-    position: relative;
-    align-items: center;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-around;
-    padding: 20px;
-}
-.partners::before{
-    content: '';
-    background-color: black;
-    opacity: 30%;
-    position: absolute;
-    z-index: -1;
-    width: 100%;
-    height: 100%;
-}
-.partners img{
-    width: 120px;
-    transition: transform 0.3s ease;
-    margin: 15px;
+    .ph {
+        font-size: 24px;
+    }
+
+    .fgrid {
+        display: flex;
+        flex-direction: column;
+        gap: 25px;
+    }
+
+    .aboutus {
+        border-right: none;
+        border-bottom: 4px solid white;
+        padding-bottom: 25px;
+    }
+
+    .rightreserved {
+        width: 85%;
+    }
 }
 
+/* --- MOBILE RESPONSIVE (Below 576px) --- */
+@media (max-width: 576px) {
+    .container {
+        margin-top: 90px;
+    }
 
+    .container .shayanimg {
+        height: 200px;
+        width: 200px;
+    }
 
-/* --- Footer --- */
-footer {
-    margin-top: 60px;
-    align-items: center;
-    padding-bottom: 15px;
-   position: relative;
-   color: white;
-}
-footer h2{
-    text-decoration: underline;
-}
-.fgrid{
-    display: flex;
-    flex-direction: column;
-}
-.sociallinks{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-}
-.sociallinks ul{
-    text-align: center;
-    list-style: none;
-    padding: 0;
-}
-.sociallinks ul li{
-    transition: transform 0.3s ease;
-    color: white;
-}
-.sociallinks ul a{
-    text-decoration: none;
-    color: white;
-}
-.sociallinks ul li:hover{
-    text-decoration: underline;
-    transform: scale(1.1);
-}
-.aboutus{
-   border-bottom: 4px solid white;
-   border-right: none;
-}
-footer::before{
-    content: '';
-    position: absolute;
-    color: white;
-    background-color: black;
-    opacity: 60%;
-    width: 100%;
-    height: 100%;
-    z-index: -2;
-}
+    .container p {
+        font-size: 16px;
+    }
 
+    .past-paper-button .btn {
+        font-size: 16px;
+        padding: 10px 25px;
+    }
 
-
-.rightreserved {
-    border-top: 2px solid white;
-    width: 50%;
-    margin: 20px auto;
-    padding-top: 15px;
-    text-align: center;
-    width: 85%;
-}
-
-
-
+    .pst {
+        max-width: 280px;
+    }
 }
