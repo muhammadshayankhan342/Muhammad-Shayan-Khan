@@ -6,8 +6,8 @@
 body {
     margin: 0;
     padding: 0;
-    /* background: url('bg2.jpg'); */
-    background-color: #32CD32; /* Fallback black background */
+    background: url('bg2.jpg'); 
+    background-color: #000; /* Fallback black background */
     font-family: 'Poppins', sans-serif;
     color: white;
     direction: ltr; /* English LTR layout */
